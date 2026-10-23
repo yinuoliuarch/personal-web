@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yinuo Liu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Yinuo Liu — computational designer trained in architecture. Columbia GSAPP / The Cooper Union.">
+<meta property="og:title" content="Yinuo Liu">
+<meta property="og:description" content="Computational designer trained in architecture. Columbia GSAPP / The Cooper Union.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&text=%E4%B8%80%E8%AF%BA&display=swap" rel="stylesheet">
+
+<style>
+/* ── tokens: dark first, black / white / yellow ── */
+:root {
+  --bg:    #090909;
+  --bg2:   #111111;
+  --line:  #1e1e1e;
+  --dim:   #3a3a3a;
+  --muted: #606060;
+  --mid:   #888888;
+  --soft:  #b8b8b8;
+  --fg:    #e4e4e4;
+  --accent: #ffd60a;
+  --accent-bg: rgba(255,214,10,.10);
+  --accent-line: rgba(255,214,10,.40);
+  --mono:  'Space Mono', 'Courier New', monospace;
+  --serif: 'Averia Serif Libre', 'Noto Serif SC', Georgia, serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f9f9f7; --bg2: #f1f1ee; --line: #e0e0db; --dim: #b4b4ae;
+    --muted: #888882; --mid: #606060; --soft: #3a3a38; --fg: #111110;
+    --accent: #b58b00; --accent-bg: rgba(181,139,0,.10); --accent-line: rgba(181,139,0,.40);
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f9f9f7; --bg2: #f1f1ee; --line: #e0e0db; --dim: #b4b4ae;
+  --muted: #888882; --mid: #606060; --soft: #3a3a38; --fg: #111110;
+  --accent: #b58b00; --accent-bg: rgba(181,139,0,.10); --accent-line: rgba(181,139,0,.40);
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.75;
+  padding-left:  max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: 680px; margin: 0 auto; }
+
+/* ── header ── */
+.site-header {
+  padding-top: max(96px, env(safe-area-inset-top, 0px));
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 20px;
+}
+.headline {
+  font-family: var(--serif);
+  font-size: clamp(30px, 6vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.headline .cn { font-family: 'Noto Serif SC', var(--serif); }
+.headline .name { color: var(--accent); }
+.headline .dot  { color: var(--dim); }
+.intro { font-size: 13px; line-height: 1.9; color: var(--mid); max-width: 60ch; }
+
+.meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.status { display: flex; align-items: center; gap: 7px; font-size: 11px; letter-spacing: .1em; color: var(--muted); }
+.status::after { content: ''; width: 1px; height: 16px; background: var(--line); margin-left: 9px; }
+.pulse { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); animation: blink 2.6s ease-in-out infinite; }
+@keyframes blink { 0%,100% { opacity: 1 } 50% { opacity: .2 } }
+.links { display: flex; flex-wrap: wrap; gap: 6px; }
+.links a {
+  font-size: 10px; letter-spacing: .12em; color: var(--muted);
+  padding: 5px 11px; border: 1px solid var(--line); border-radius: 4px;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.links a:hover { color: var(--fg); border-color: var(--accent-line); background: var(--bg2); }
+
+/* ── sections ── */
+.section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+.section:last-of-type { border-bottom: none; }
+.sec-label {
+  font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--dim);
+  padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 20px;
+}
+
+/* ── work ── */
+.work-group + .work-group { margin-top: 40px; }
+.proj-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.proj-card {
+  display: flex; flex-direction: column; text-align: left;
+  background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  cursor: pointer; font: inherit; color: inherit; padding: 0;
+  transition: border-color .2s, transform .2s;
+}
+.proj-card:hover { border-color: var(--dim); transform: translateY(-2px); }
+.proj-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.proj-card.active { border-color: var(--accent); }
+.proj-thumb { aspect-ratio: 16 / 9; width: 100%; background: var(--bg); overflow: hidden; }
+.proj-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s cubic-bezier(.16,1,.3,1); }
+.proj-card:hover .proj-thumb img { transform: scale(1.03); }
+.proj-foot { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 10px 12px 12px; }
+.proj-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.proj-num { font-size: 9px; letter-spacing: .06em; color: var(--dim); }
+.proj-title { font-size: 12px; font-weight: 700; color: var(--soft); letter-spacing: -.01em; }
+.proj-card:hover .proj-title, .proj-card.active .proj-title { color: var(--fg); }
+.proj-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+.tag {
+  font-size: 9px; letter-spacing: .12em; color: var(--accent);
+  background: var(--accent-bg); border: 1px solid var(--accent-line);
+  padding: 2px 7px; border-radius: 4px; white-space: nowrap;
+}
+.year { font-size: 9px; color: var(--dim); }
+
+/* ── detail panel ── */
+.proj-detail {
+  margin-top: 12px; background: var(--bg2);
+  border: 1px solid var(--accent); border-radius: 12px;
+  padding: 28px 24px 32px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.proj-detail[hidden] { display: none !important; }
+.pd-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.pd-title { font-size: 18px; font-weight: 700; letter-spacing: -.02em; color: var(--fg); }
+.pd-close {
+  font: inherit; font-size: 11px; color: var(--muted); background: none;
+  border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+.pd-close:hover { color: var(--fg); border-color: var(--dim); }
+.pd-hero { aspect-ratio: 16 / 7; border-radius: 8px; overflow: hidden; background: var(--bg); }
+.pd-hero img { width: 100%; height: 100%; object-fit: cover; }
+.pd-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pd-pills span { font-size: 10px; letter-spacing: .1em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 3px 10px; }
+.pd-body { display: flex; flex-direction: column; gap: 12px; font-size: 12px; line-height: 1.9; color: var(--mid); max-width: 65ch; }
+.pd-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pd-ph {
+  aspect-ratio: 4 / 3; border-radius: 8px; background: var(--bg); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; letter-spacing: .12em; color: var(--dim); text-transform: uppercase;
+}
+
+/* ── education ── */
+.degrees { display: flex; flex-direction: column; gap: 14px; }
+.degree { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+.degree-badge { font-size: 9px; letter-spacing: .1em; color: var(--accent); padding-top: 3px; }
+.degree-name { font-size: 13px; font-weight: 700; color: var(--soft); }
+.degree-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* ── experience ── */
+.job { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.job:first-of-type { padding-top: 0; }
+.job:last-child { border-bottom: none; padding-bottom: 0; }
+.job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 4px; }
+.job-org { font-size: 13px; font-weight: 700; color: var(--soft); }
+.job-dates { font-size: 10px; letter-spacing: .05em; color: var(--dim); white-space: nowrap; }
+.job-role { font-size: 11px; letter-spacing: .08em; color: var(--accent); margin-bottom: 8px; }
+.job ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.job li { position: relative; padding-left: 20px; font-size: 12px; line-height: 1.7; color: var(--muted); }
+.job li::before { content: '—'; position: absolute; left: 0; color: var(--dim); }
+
+/* ── skills ── */
+.skills { display: flex; flex-direction: column; gap: 16px; }
+.skill { display: grid; grid-template-columns: 120px 1fr; gap: 14px; align-items: start; }
+.skill-cat { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); padding-top: 2px; }
+.skill-list { font-size: 12px; line-height: 1.75; color: var(--muted); }
+
+/* ── footer ── */
+footer {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;
+  padding: 20px 0 max(32px, env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--line);
+  font-size: 11px; color: var(--dim);
+}
+footer .mail { color: var(--accent); }
+
+/* ── reveal ── */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ── responsive ── */
+@media (max-width: 560px) {
+  .site-header { padding-top: max(56px, env(safe-area-inset-top, 0px)); }
+  .proj-grid, .pd-imgs { grid-template-columns: 1fr; }
+  .proj-detail { padding: 20px 16px 24px; }
+  .job-top { flex-direction: column; gap: 2px; }
+  .job-dates { white-space: normal; }
+  .skill { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .pulse { animation: none; }
+  .proj-card, .proj-thumb img { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="site-header">
+  <h1 class="headline reveal">I'm <span class="cn">一诺</span> <span class="name">Yinuo Liu</span><span class="dot">.</span></h1>
+  <p class="intro reveal">
+    Computational designer trained in architecture, with experience leading product development,
+    building interactive prototypes, and teaching digital design tools. Interested in creative software
+    that helps designers explore alternatives and work through constraints.
+  </p>
+  <div class="meta-row reveal">
+    <span class="status"><span class="pulse"></span>New York, NY</span>
+    <nav class="links" aria-label="Links">
+      <a href="mailto:yl6322@columbia.edu">email ↗</a>
+      <a href="#" data-todo="cv">cv ↗</a>
+      <a href="https://www.linkedin.com/in/yinuoliu" target="_blank" rel="noopener">linkedin ↗</a>
+      <a href="https://github.com/yinuoliu" target="_blank" rel="noopener">github ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ── WORK ── -->
+<section class="section" id="work" aria-label="Work">
+
+  <div class="work-group reveal">
+    <p class="sec-label">Work</p>
+    <div class="proj-grid">
+      <button class="proj-card" data-id="marquee" aria-expanded="false" aria-controls="detail-marquee">
+        <div class="proj-thumb"><img src="images/marquee.jpg" alt="Marquee app on a phone" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">01</span><span class="proj-title">Marquee</span></div>
+          <div class="proj-meta"><span class="tag">product</span><span class="year">2026–present</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="aretherey" aria-expanded="false" aria-controls="detail-aretherey">
+        <div class="proj-thumb"><img src="images/walk.jpg" alt="Night street with a highlighted walking route" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">02</span><span class="proj-title">Are We There Yet?</span></div>
+          <div class="proj-meta"><span class="tag">product</span><span class="year">2026</span></div>
+        </div>
+      </button>
+    </div>
+    <div class="details">
+      <article class="proj-detail" id="detail-marquee" hidden>
+        <div class="pd-head"><h3 class="pd-title">Marquee</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/marquee.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Product Team Leader</span><span>CS3 VALIDATE Accelerator</span><span>2026–present</span></div>
+        <div class="pd-body">
+          <p>Cultural discovery and planning prototype for NYC — connecting interest selection to event browsing, visit scheduling, and calendar export. Led customer discovery and competitive positioning research to define target users and MVP scope.</p>
+          <p>Built an interactive prototype connecting interest selection and event browsing to visit scheduling and calendar export, working in a two-person team across product, design, and data.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+      <article class="proj-detail" id="detail-aretherey" hidden>
+        <div class="pd-head"><h3 class="pd-title">Are We There Yet?</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/walk.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Product Team Leader</span><span>CS3 VALIDATE Accelerator</span><span>2026</span></div>
+        <div class="pd-body">
+          <p>Urban walking safety product focused on nighttime pedestrian safety. Conducted user research and use-case definition to understand how people navigate unfamiliar neighborhoods at night.</p>
+          <p>Developed product strategy around safer route suggestions, drawing on lighting, foot traffic, and reported incidents in a lightweight mobile experience.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="work-group reveal">
+    <p class="sec-label">Computational Design</p>
+    <div class="proj-grid">
+      <button class="proj-card" data-id="tinygreens" aria-expanded="false" aria-controls="detail-tinygreens">
+        <div class="proj-thumb"><img src="images/greens.jpg" alt="Rooftop garden with sunlight zones" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">03</span><span class="proj-title">Tiny Greens</span></div>
+          <div class="proj-meta"><span class="tag">computation</span><span class="year">2026</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="betweenobs" aria-expanded="false" aria-controls="detail-betweenobs">
+        <div class="proj-thumb"><img src="images/between.jpg" alt="Europa with a spacecraft trajectory" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">04</span><span class="proj-title">Between Observations</span></div>
+          <div class="proj-meta"><span class="tag">thesis</span><span class="year">2026–present</span></div>
+        </div>
+      </button>
+    </div>
+    <div class="details">
+      <article class="proj-detail" id="detail-tinygreens" hidden>
+        <div class="pd-head"><h3 class="pd-title">Tiny Greens</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/greens.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Independent Project</span><span>Rhino + Grasshopper</span><span>Ladybug Tools</span><span>2026</span></div>
+        <div class="pd-body">
+          <p>Parametric garden-planning tool that generates planting layouts from site boundaries, user needs, and planting constraints. Built in Rhino &amp; Grasshopper with Ladybug Tools for NYC-specific sunlight analysis.</p>
+          <p>The tool compares layout options across seasons, showing how spatial choices — plant placement, path widths, bed orientation — change growing conditions through the year.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+      <article class="proj-detail" id="detail-betweenobs" hidden>
+        <div class="pd-head"><h3 class="pd-title">Between Observations</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/between.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Columbia GSAPP Thesis</span><span>Browser-based Atlas</span><span>2026–present</span></div>
+        <div class="pd-body">
+          <p>Browser-based interactive research atlas connecting NASA/JPL Galileo trajectory reconstructions, archival images, and publication timelines — tracing how spacecraft observations of Europa become scientific interpretations, sometimes decades later.</p>
+          <p>Source labels distinguish archival material, computational reconstructions, and later interpretations; camera controls and persistent captions keep navigation legible.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="work-group reveal">
+    <p class="sec-label">Architecture</p>
+    <div class="proj-grid">
+      <button class="proj-card" data-id="threshold" aria-expanded="false" aria-controls="detail-threshold">
+        <div class="proj-thumb"><img src="images/threshold.jpg" alt="White study model with a yellow threshold" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">05</span><span class="proj-title">Threshold Systems</span></div>
+          <div class="proj-meta"><span class="tag">studio</span><span class="year">2024</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="matintel" aria-expanded="false" aria-controls="detail-matintel">
+        <div class="proj-thumb"><img src="images/material.jpg" alt="Robot arm milling a timber joint" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">06</span><span class="proj-title">Material Intelligence</span></div>
+          <div class="proj-meta"><span class="tag">studio</span><span class="year">2024</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="groundfig" aria-expanded="false" aria-controls="detail-groundfig">
+        <div class="proj-thumb"><img src="images/ground.jpg" alt="Topographic model of lower Manhattan" loading="lazy" width="400" height="225"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">07</span><span class="proj-title">Ground Figures</span></div>
+          <div class="proj-meta"><span class="tag">studio</span><span class="year">2023</span></div>
+        </div>
+      </button>
+    </div>
+    <div class="details">
+      <article class="proj-detail" id="detail-threshold" hidden>
+        <div class="pd-head"><h3 class="pd-title">Threshold Systems</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/threshold.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Cooper Union Studio</span><span>Parametric Design</span><span>2024</span></div>
+        <div class="pd-body">
+          <p>Parametric boundary conditions as spatial negotiators between program and structure. The project treats thresholds — edges, transitions, in-between zones — as design drivers rather than residual space.</p>
+          <p>A family of threshold conditions generated from shared rules shows how small shifts in parameters produce very different spatial experiences.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+      <article class="proj-detail" id="detail-matintel" hidden>
+        <div class="pd-head"><h3 class="pd-title">Material Intelligence</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/material.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Cooper Union Studio</span><span>Robotic Fabrication</span><span>2024</span></div>
+        <div class="pd-body">
+          <p>Robotic fabrication workflows for non-standard timber assemblies at architectural scale — a design-to-fabrication pipeline that accounts for grain, knots, and moisture rather than treating timber as uniform.</p>
+          <p>Each joint is a set of constraints the robot resolves per piece of wood, producing assemblies that are structurally consistent but visually varied.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+      <article class="proj-detail" id="detail-groundfig" hidden>
+        <div class="pd-head"><h3 class="pd-title">Ground Figures</h3><button class="pd-close">close ×</button></div>
+        <div class="pd-hero"><img src="images/ground.jpg" alt="" loading="lazy"></div>
+        <div class="pd-pills"><span>Cooper Union Studio</span><span>Urban Mapping</span><span>2023</span></div>
+        <div class="pd-body">
+          <p>Urban topography as generative field — mapping pressure, density, and movement in lower Manhattan, treating the ground as an active surface shaped by the forces acting on it.</p>
+          <p>Foot traffic, program density, and transit interchanges were layered as fields to drive the form of a ground-level intervention.</p>
+        </div>
+        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── EDUCATION ── -->
+<section class="section" id="education">
+  <p class="sec-label">Education</p>
+  <div class="degrees reveal">
+    <div class="degree">
+      <span class="degree-badge">M.S.</span>
+      <div><div class="degree-name">Columbia University, GSAPP</div><div class="degree-sub">Computational Design Practices · Expected May 2027, New York, NY</div></div>
+    </div>
+    <div class="degree">
+      <span class="degree-badge">B.Arch</span>
+      <div><div class="degree-name">The Cooper Union</div><div class="degree-sub">Bachelor of Architecture · 2020–2025, New York, NY</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section class="section" id="experience">
+  <p class="sec-label">Experience</p>
+  <div class="reveal">
+    <div class="job">
+      <div class="job-top"><span class="job-org">Columbia University / Barnard College — Digital Architecture Lab</span><span class="job-dates">Sep 2026–Present · New York, NY</span></div>
+      <div class="job-role">Teaching Assistant</div>
+      <ul>
+        <li>Advise students on design projects and assignments, offering feedback on ideas and solving technical issues in Rhino &amp; Grasshopper</li>
+        <li>Develop tutorials and workshops on computational design, modeling, prototyping, and rendering workflows</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-top"><span class="job-org">Alexander Gorlin Architects</span><span class="job-dates">Jul–Dec 2025 · New York, NY</span></div>
+      <div class="job-role">Architectural Designer</div>
+      <ul><li>Built 3D models, drawings, and presentation materials for client reviews; revised designs and documentation as requirements changed</li></ul>
+    </div>
+    <div class="job">
+      <div class="job-top"><span class="job-org">Bone / Levine Architects</span><span class="job-dates">Jun–Aug 2024 · New York, NY</span></div>
+      <div class="job-role">Architectural Intern</div>
+      <ul><li>Used findings from site investigations to develop renovation drawings, models, and client-facing documentation</li></ul>
+    </div>
+    <div class="job">
+      <div class="job-top"><span class="job-org">Capol Hua Yang International &amp; Associates</span><span class="job-dates">Jun–Aug 2023 · Shenzhen, China</span></div>
+      <div class="job-role">Architectural Intern</div>
+      <ul><li>Revised multi-story industrial building designs to address fire-code, setback, and site constraints; prepared documentation for approval</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section class="section" id="skills">
+  <p class="sec-label">Skills</p>
+  <div class="skills reveal">
+    <div class="skill"><span class="skill-cat">Product</span><span class="skill-list">Customer discovery, competitor research, use-case definition, MVP scoping, interactive prototyping</span></div>
+    <div class="skill"><span class="skill-cat">Comp. Design</span><span class="skill-list">Rhino, Grasshopper, Ladybug Tools, parametric modeling, environmental analysis, Python</span></div>
+    <div class="skill"><span class="skill-cat">Production</span><span class="skill-list">Blender, Enscape, Unreal Engine, Houdini, Adobe Creative Suite, 3D printing, laser cutting</span></div>
+    <div class="skill"><span class="skill-cat">Data + Viz</span><span class="skill-list">Data visualization, browser-based interactive atlases, mapping, GIS, GeoJSON, sonification</span></div>
+    <div class="skill"><span class="skill-cat">AI Workflows</span><span class="skill-list">AI-assisted scripting, generative image workflows, prompt iteration</span></div>
+    <div class="skill"><span class="skill-cat">Languages</span><span class="skill-list">English, Mandarin Chinese</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>Yinuo Liu © 2026</span>
+  <span class="mail">yl6322@columbia.edu</span>
+  <span>New York</span>
+</footer>
+
+</div>
+
+<script>
+/* scroll reveal */
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (!e.isIntersecting) return;
+      setTimeout(() => e.target.classList.add('in'), i * 60);
+      io.unobserve(e.target);
+    });
+  }, { threshold: .05, rootMargin: '0px 0px -28px 0px' });
+  els.forEach(el => io.observe(el));
+})();
+
+/* project cards: one detail panel open at a time */
+(function () {
+  const cards = document.querySelectorAll('.proj-card');
+  function closeAll() {
+    cards.forEach(c => { c.classList.remove('active'); c.setAttribute('aria-expanded', 'false'); });
+    document.querySelectorAll('.proj-detail').forEach(d => { d.hidden = true; });
+  }
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const detail = document.getElementById('detail-' + card.dataset.id);
+      if (!detail) return;
+      const wasOpen = card.classList.contains('active');
+      closeAll();
+      if (wasOpen) return;
+      card.classList.add('active');
+      card.setAttribute('aria-expanded', 'true');
+      detail.hidden = false;
+      requestAnimationFrame(() => detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' }));
+    });
+  });
+  document.querySelectorAll('.pd-close').forEach(btn => btn.addEventListener('click', closeAll));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+})();
+</script>
+</body>
+</html>
