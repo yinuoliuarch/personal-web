@@ -1,0 +1,166 @@
+{
+  "slug": "living-street",
+  "order": 1,
+  "featured": true,
+  "title": "Living Street",
+  "subtitle": "Reparative Infrastructure in Flushing",
+  "context": "B.Arch Thesis Project, The Cooper Union",
+  "year": 2025,
+  "term": "2024–2025",
+  "location": "Flushing, Queens, NY",
+  "instructors": [
+    "Prof. Guido Zuliani"
+  ],
+  "collaborators": [],
+  "role": "Individual thesis",
+  "tags": [
+    "urban design",
+    "informal economy",
+    "infrastructure",
+    "street vending",
+    "community"
+  ],
+  "summary": "A thesis that turns the void beneath the LIRR embankment in Flushing into a semi-sheltered civic commons for the elderly immigrant street vendors who already work along it.",
+  "description": [
+    "This project investigates the spatial conditions of informality along the LIRR railway embankment in Flushing, Queens, where large-scale infrastructure both connects regions and fragments local communities. As a physical and symbolic barrier, the embankment imposes a rigid division within the neighborhood: its elevated tracks and fenced edges cut through the urban fabric, producing long stretches of inaccessible, underutilized space. These infrastructural voids, though centrally located, are often dismissed as leftover or undesirable.",
+    "Yet within them, a parallel urban life unfolds. Informal street vendors, predominantly elderly Chinese immigrants, adapt to these spatial margins, operating without legal permits, shelter, or access to basic services. Their vending setups speak to both resilience and exclusion: makeshift tables, crates, and carts line the sidewalk edge, often just feet away from the blank infrastructural wall. These practices are central to Flushing’s street life and economy but remain politically invisible, marginalized by a regulatory system that criminalizes informality. The project asks how these infrastructural blind spots might be reimagined, not as voids to be erased, but as civic thresholds where informal economies are not only acknowledged, but spatially sustained.",
+    "In response, the project proposes a reparative design strategy that transforms the void beneath the embankment into a linear civic commons: an adaptable, semi-sheltered corridor that supports street vending, community use, and public utilities. Rather than adding new structures on top of or beside the embankment, the design carves directly into its mass, hollowing out a series of vaulted bays between existing structural columns. These incisions create continuity without erasure, offering vendors a protected environment with electricity and water access. Each bay is a flexible zone that accommodates different vending formats while allowing customization and informal appropriation with vendors’ own tools.",
+    "The spatial design is paired with “Sidewalk Tactics,” a foldable zine distributed on-site that outlines vendors’ rights, hygiene practices, and spatial protocols. Rather than formalizing informality, the project frames infrastructure as a platform for care, resilience, and redistribution, envisioning public space that supports those who have long been excluded from it."
+  ],
+  "category": "design",
+  "category_label": "Architecture & Urban Design",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-street-perspective.jpg",
+      "caption": "Proposed civic commons beneath the LIRR viaduct",
+      "credit": "Yinuo Liu",
+      "kind": "hero",
+      "width": 1686,
+      "height": 840,
+      "is_hero": true,
+      "source": "portfolio PDF p.3"
+    },
+    {
+      "file": "images/02-site-photo-viaduct.jpg",
+      "caption": "Vending beneath the viaduct, site photograph",
+      "credit": "Yinuo Liu",
+      "kind": "photo",
+      "width": 530,
+      "height": 530,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/03-site-photo-goods.jpg",
+      "caption": "Vendor goods laid out on the sidewalk",
+      "credit": "Yinuo Liu",
+      "kind": "photo",
+      "width": 531,
+      "height": 532,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/04-vending-tools.jpg",
+      "caption": "Vending Tools — an observation on the spatial practice of vending",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 844,
+      "height": 844,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/05-street-axonometric.jpg",
+      "caption": "Street Axonometric — vendors gather underneath the LIRR viaduct on Main St.",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 847,
+      "height": 847,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/06-street-elevation.jpg",
+      "caption": "Street Elevation — vendors gather underneath the LIRR viaduct on Main St.",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 1068,
+      "height": 513,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/07-sidewalk-tactics-map.jpg",
+      "caption": "Sidewalk Tactics — guide map helping vendors locate nearby infrastructure and utilities",
+      "credit": "Yinuo Liu",
+      "kind": "map",
+      "width": 851,
+      "height": 960,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/08-movement-analysis.jpg",
+      "caption": "Movement Analysis — vendors settle in the most condensed pedestrian zone",
+      "credit": "Yinuo Liu",
+      "kind": "map",
+      "width": 845,
+      "height": 966,
+      "is_hero": false,
+      "source": "portfolio PDF p.2"
+    },
+    {
+      "file": "images/09-bay-axonometric.jpg",
+      "caption": "Axonometric of the carved vaulted bays",
+      "credit": "Yinuo Liu",
+      "kind": "render",
+      "width": 1162,
+      "height": 687,
+      "is_hero": false,
+      "source": "portfolio PDF p.3"
+    },
+    {
+      "file": "images/10-interior-bay.jpg",
+      "caption": "Interior of a vending bay",
+      "credit": "Yinuo Liu",
+      "kind": "render",
+      "width": 569,
+      "height": 569,
+      "is_hero": false,
+      "source": "portfolio PDF p.3"
+    },
+    {
+      "file": "images/11-interior-passage.jpg",
+      "caption": "Passage through the embankment",
+      "credit": "Yinuo Liu",
+      "kind": "render",
+      "width": 569,
+      "height": 569,
+      "is_hero": false,
+      "source": "portfolio PDF p.3"
+    },
+    {
+      "file": "images/12-model-perspective.jpg",
+      "caption": "Physical model — vaulted canopy and bays",
+      "credit": "Yinuo Liu",
+      "kind": "model",
+      "width": 1686,
+      "height": 619,
+      "is_hero": false,
+      "source": "portfolio PDF p.3"
+    },
+    {
+      "file": "images/13-model-elevation.jpg",
+      "caption": "Physical model — elevation",
+      "credit": "Yinuo Liu",
+      "kind": "model",
+      "width": 1686,
+      "height": 522,
+      "is_hero": false,
+      "source": "portfolio PDF p.3"
+    }
+  ]
+}

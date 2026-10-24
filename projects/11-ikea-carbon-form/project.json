@@ -1,0 +1,138 @@
+{
+  "slug": "ikea-carbon-form",
+  "order": 11,
+  "featured": false,
+  "title": "Carbon Form Analysis: IKEA",
+  "subtitle": "Red Hook, Brooklyn",
+  "context": "Environmental Technology, The Cooper Union",
+  "year": 2023,
+  "term": "Spring 2023",
+  "location": "Red Hook, Brooklyn, NY",
+  "instructors": [
+    "Prof. Elisa Iturbe"
+  ],
+  "collaborators": [
+    "Tate Liang",
+    "Evan Chiang",
+    "Sofia Mercado"
+  ],
+  "role": "Collaborative analysis (4 people)",
+  "tags": [
+    "carbon form",
+    "energy",
+    "typology",
+    "diagram",
+    "urban analysis"
+  ],
+  "summary": "A diagrammatic study of how IKEA Red Hook choreographs parking lot, showroom and warehouse — and how its car-dependent sequence makes it a passive carbon form.",
+  "description": [
+    "As the world’s dominant ready-to-assemble furniture company, IKEA has established itself as an icon beyond the furniture retailer. Through merchandise, in-store restaurants, and designer collaborations, it has seamlessly integrated itself into mass culture. From the parking lot to the showroom and warehouse, IKEA as a big-box store assembles three typologies into a choreographed sequence designed to promote consumption.",
+    "Each typology is organized around a different mode of efficiency: the parking lot maximizes area with minimal turns, the showroom maximizes time spent through a wandering maze layout, and the warehouse maximizes speed through clear, indexed paths. Analyzing its urban context, including access to public and private transportation, shows how IKEA acts as a passive carbon form by privileging private cars, reproducing the current energy paradigm through its spatial and economic configuration."
+  ],
+  "category": "research",
+  "category_label": "Precedent Research & Analysis",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-site-sections.jpg",
+      "caption": "Sections A–C — from neighborhood to showroom to loading dock",
+      "credit": "Group work",
+      "kind": "hero",
+      "width": 1874,
+      "height": 657,
+      "is_hero": true,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/02-cover-sheet.jpg",
+      "caption": "Carbon Form Analysis — cover sheet",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 889,
+      "height": 1013,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/03-axonometric.jpg",
+      "caption": "IKEA Red Hook — axonometric",
+      "credit": "Group work",
+      "kind": "drawing",
+      "width": 770,
+      "height": 655,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/04-typology-plans.jpg",
+      "caption": "Parking lot, showroom and warehouse — three modes of efficiency",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 1106,
+      "height": 651,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/05-red-hook-organization.jpg",
+      "caption": "IKEA Red Hook — program organization",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 370,
+      "height": 648,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/06-storefront-organizations.jpg",
+      "caption": "Organization diagrams of IKEA storefronts",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 581,
+      "height": 636,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/07-transit-map.jpg",
+      "caption": "Transit access map",
+      "credit": "Group work",
+      "kind": "map",
+      "width": 449,
+      "height": 617,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/08-site-map.jpg",
+      "caption": "Site location map",
+      "credit": "Group work",
+      "kind": "map",
+      "width": 448,
+      "height": 617,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/09-journey-diagram.jpg",
+      "caption": "Journey diagram",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 905,
+      "height": 378,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    },
+    {
+      "file": "images/10-system-diagram.jpg",
+      "caption": "System diagram",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 852,
+      "height": 415,
+      "is_hero": false,
+      "source": "portfolio PDF p.14"
+    }
+  ]
+}

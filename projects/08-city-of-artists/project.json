@@ -1,0 +1,149 @@
+{
+  "slug": "city-of-artists",
+  "order": 8,
+  "featured": false,
+  "title": "City of Artists",
+  "subtitle": "Housing Analysis — Paris",
+  "context": "Design III, The Cooper Union",
+  "year": 2022,
+  "term": "Fall 2022",
+  "location": "Paris, France (precedent)",
+  "instructors": [
+    "Prof. Daisy Ames",
+    "Guido Zuliani",
+    "Kaitie Lau"
+  ],
+  "collaborators": [
+    "Julian Yang",
+    "Grant Peck"
+  ],
+  "role": "Collaborative analysis (3 people); credits per image",
+  "tags": [
+    "housing",
+    "live-work",
+    "precedent analysis",
+    "circulation",
+    "physical model"
+  ],
+  "summary": "A study of how Michel Kagan’s Cité d’Artistes balances domestic life and artistic production through circulation cores, shared corridors and double-height live-work units.",
+  "description": [
+    "Located in Paris, Cité d’Artistes (City of Artists) by Michel Kagan was developed in the 1980s as part of a broader urban planning initiative aimed at revitalizing underutilized areas of the city. Designed for artists and their families, the project includes 38 individual art studios and 12 family apartments, combining residential and creative functions into a unified architectural system.",
+    "Our analysis explored how Kagan’s spatial strategies mediate the intersection of domestic life and artistic production. Rooted in a modernist rationalist framework, the design uses clear geometric forms and carefully organized circulation to balance privacy and collectivity. A key focus was the vertical circulation cores and shared access corridors, which intersect individual units and common spaces, creating both functional efficiency and opportunities for social interaction. Double-height volumes within the live-work units allow flexibility for various creative practices, while the rhythmic layout of courtyards and public walkways fosters a strong sense of community."
+  ],
+  "category": "research",
+  "category_label": "Precedent Research & Analysis",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-physical-model.jpg",
+      "caption": "1/8″ = 1′ physical model",
+      "credit": "Group work",
+      "kind": "hero",
+      "width": 1051,
+      "height": 783,
+      "is_hero": true,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/02-axon-circular-building.jpg",
+      "caption": "Axonometric — circular building",
+      "credit": "Yinuo Liu & Julian Yang",
+      "kind": "drawing",
+      "width": 489,
+      "height": 737,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/03-circulation-axonometric.jpg",
+      "caption": "Circulation axonometric",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 538,
+      "height": 463,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/04-floor-plans.jpg",
+      "caption": "Floor plans and section",
+      "credit": "Yinuo Liu & Julian Yang",
+      "kind": "drawing",
+      "width": 668,
+      "height": 1925,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/05-axon-typical-unit.jpg",
+      "caption": "Axonometric — typical unit",
+      "credit": "Grant Peck",
+      "kind": "drawing",
+      "width": 546,
+      "height": 441,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/06-aerial-context.jpg",
+      "caption": "Site context — aerial",
+      "credit": null,
+      "kind": "map",
+      "width": 523,
+      "height": 536,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/07-circulation-model-01.jpg",
+      "caption": "1/8″ = 1′ circulation model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 481,
+      "height": 347,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/08-circulation-model-02.jpg",
+      "caption": "1/8″ = 1′ circulation model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 481,
+      "height": 273,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/09-site-model.jpg",
+      "caption": "1/16″ = 1′ site plan model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 484,
+      "height": 410,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/10-entrance-model.jpg",
+      "caption": "1/8″ = 1′ entrance model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 511,
+      "height": 273,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    },
+    {
+      "file": "images/11-circular-unit-model.jpg",
+      "caption": "1/8″ = 1′ circular unit model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 487,
+      "height": 274,
+      "is_hero": false,
+      "source": "portfolio PDF p.10"
+    }
+  ]
+}

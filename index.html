@@ -160,6 +160,32 @@ img { max-width: 100%; display: block; }
   font-size: 9px; letter-spacing: .12em; color: var(--dim); text-transform: uppercase;
 }
 
+/* ── package project details ── */
+.pd-subtitle { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.pd-meta { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 11px; }
+.pd-meta:empty { display: none; }
+.pd-meta div { display: flex; gap: 8px; }
+.pd-meta dt { color: var(--accent); letter-spacing: .1em; text-transform: uppercase; font-size: 9px; padding-top: 2px; }
+.pd-meta dd { color: var(--muted); }
+.pd-sub { font-size: 12px; color: var(--soft); margin-top: 8px; }
+.pd-sub-credit { font-size: 10px; color: var(--dim); margin-top: -10px; }
+.pd-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 10px; align-items: start; }
+.pd-fig { display: flex; flex-direction: column; gap: 6px; }
+.pd-fig.wide, .pd-fig.pd-lead { grid-column: 1 / -1; }
+.pd-fig img { width: 100%; height: auto; border-radius: 8px; background: var(--bg); cursor: zoom-in; }
+.pd-fig figcaption { font-size: 10px; line-height: 1.6; color: var(--muted); }
+.pd-fig figcaption:empty { display: none; }
+.pd-credit { color: var(--dim); }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.92);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  padding: max(16px, env(safe-area-inset-top, 0px)) 16px max(16px, env(safe-area-inset-bottom, 0px)); cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 80px); object-fit: contain; border-radius: 4px; }
+.lightbox p { font-size: 11px; color: #b8b8b8; text-align: center; max-width: 70ch; }
+@media (max-width: 560px) { .pd-gallery { grid-template-columns: 1fr; } }
+
 /* ── education ── */
 .degrees { display: flex; flex-direction: column; gap: 14px; }
 .degree { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
@@ -300,6 +326,13 @@ footer .mail { color: var(--accent); }
           <div class="proj-meta"><span class="tag">thesis</span><span class="year">2026–present</span></div>
         </div>
       </button>
+      <button class="proj-card" data-id="diffuse-blocks" aria-expanded="false" aria-controls="detail-diffuse-blocks">
+        <div class="proj-thumb"><img src="projects/02-diffuse-blocks/cover.jpg" alt="Diffuse Blocks" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">05</span><span class="proj-title">Diffuse Blocks</span></div>
+          <div class="proj-meta"><span class="tag">computation</span><span class="year">Fall 2023</span></div>
+        </div>
+      </button>
     </div>
     <div class="details">
       <article class="proj-detail" id="detail-tinygreens" hidden>
@@ -322,64 +355,308 @@ footer .mail { color: var(--accent); }
         </div>
         <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
       </article>
+      <article class="proj-detail" id="detail-diffuse-blocks" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Diffuse Blocks</h3><p class="pd-subtitle">Programming for Architecture</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig wide pd-lead"><img src="projects/02-diffuse-blocks/images/01-generated-series-a.jpg" alt="Generated architectural models from block arrangements" loading="lazy" width="1644" height="451"><figcaption>Generated architectural models from block arrangements</figcaption></figure>
+        <div class="pd-pills"><span>Topics in Machine Learning, The Cooper Union</span><span>Fall 2023</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative project (2 people)</dd></div><div><dt>Instructors</dt><dd>Prof. Ben Arenda, Sam Keene</dd></div><div><dt>With</dt><dd>Tate Liang</dd></div></dl>
+        <div class="pd-body"><p>At a moment when AI technologies were only beginning to enter mainstream design discourse, this study explored the emerging role of machine learning in architectural pedagogy and concept development. Before generative tools like Stable Diffusion became widely adopted, the project investigated how image-to-image generation could influence early-stage design thinking. Using simple wooden blocks as spatial primitives, we employed Stable Diffusion to reinterpret physical arrangements into new architectural forms and visual expressions. This analog-to-digital feedback loop positioned AI not merely as a rendering tool, but as a speculative design collaborator capable of suggesting unexpected formal directions.</p><p>To deepen engagement and interactivity, we developed a Python-based program that used a webcam to read the configuration of the wooden blocks in real time, letting users participate directly in the design process and turning a passive interface into a dynamic, creative platform. The project demonstrates the potential of AI to enrich architectural workflows while emphasizing the importance of using these tools thoughtfully, balancing computational innovation with design intuition and hands-on experimentation. It reflects a transitional moment in design education, when emerging technologies began to reshape the boundaries of authorship, imagination, and collaboration in architecture.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/02-diffuse-blocks/images/02-installation.jpg" alt="Physical installation — webcam, blocks and live generation" loading="lazy" width="1121" height="771"><figcaption>Physical installation — webcam, blocks and live generation</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/02-diffuse-blocks/images/03-blocks-to-outputs.jpg" alt="Block configurations (left) and their generated interpretations (right)" loading="lazy" width="1710" height="832"><figcaption>Block configurations (left) and their generated interpretations (right)</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/02-diffuse-blocks/images/04-generated-sections.jpg" alt="Generated sectional models" loading="lazy" width="1080" height="275"><figcaption>Generated sectional models</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/02-diffuse-blocks/images/05-generated-series-b.jpg" alt="Generated series" loading="lazy" width="1663" height="313"><figcaption>Generated series</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/02-diffuse-blocks/images/06-generated-series-c.jpg" alt="Generated series" loading="lazy" width="1660" height="313"><figcaption>Generated series</figcaption></figure>
+        </div>
+      </article>
     </div>
   </div>
 
   <div class="work-group reveal">
     <p class="sec-label">Architecture</p>
     <div class="proj-grid">
-      <button class="proj-card" data-id="threshold" aria-expanded="false" aria-controls="detail-threshold">
-        <div class="proj-thumb"><img src="images/threshold.jpg" alt="White study model with a yellow threshold" loading="lazy" width="400" height="225"></div>
+      <button class="proj-card" data-id="living-street" aria-expanded="false" aria-controls="detail-living-street">
+        <div class="proj-thumb"><img src="projects/01-living-street/cover.jpg" alt="Living Street" loading="lazy" width="400" height="250"></div>
         <div class="proj-foot">
-          <div class="proj-info"><span class="proj-num">05</span><span class="proj-title">Threshold Systems</span></div>
-          <div class="proj-meta"><span class="tag">studio</span><span class="year">2024</span></div>
+          <div class="proj-info"><span class="proj-num">06</span><span class="proj-title">Living Street</span></div>
+          <div class="proj-meta"><span class="tag">studio</span><span class="year">2024–2025</span></div>
         </div>
       </button>
-      <button class="proj-card" data-id="matintel" aria-expanded="false" aria-controls="detail-matintel">
-        <div class="proj-thumb"><img src="images/material.jpg" alt="Robot arm milling a timber joint" loading="lazy" width="400" height="225"></div>
+      <button class="proj-card" data-id="microscopic-infrastructures" aria-expanded="false" aria-controls="detail-microscopic-infrastructures">
+        <div class="proj-thumb"><img src="projects/03-microscopic-infrastructures/cover.jpg" alt="Microscopic Infrastructures" loading="lazy" width="400" height="250"></div>
         <div class="proj-foot">
-          <div class="proj-info"><span class="proj-num">06</span><span class="proj-title">Material Intelligence</span></div>
-          <div class="proj-meta"><span class="tag">studio</span><span class="year">2024</span></div>
+          <div class="proj-info"><span class="proj-num">07</span><span class="proj-title">Microscopic Infrastructures</span></div>
+          <div class="proj-meta"><span class="tag">studio</span><span class="year">Spring 2024</span></div>
         </div>
       </button>
-      <button class="proj-card" data-id="groundfig" aria-expanded="false" aria-controls="detail-groundfig">
-        <div class="proj-thumb"><img src="images/ground.jpg" alt="Topographic model of lower Manhattan" loading="lazy" width="400" height="225"></div>
+      <button class="proj-card" data-id="young-israel-of-scarsdale" aria-expanded="false" aria-controls="detail-young-israel-of-scarsdale">
+        <div class="proj-thumb"><img src="projects/04-young-israel-of-scarsdale/cover.jpg" alt="Young Israel of Scarsdale" loading="lazy" width="400" height="250"></div>
         <div class="proj-foot">
-          <div class="proj-info"><span class="proj-num">07</span><span class="proj-title">Ground Figures</span></div>
-          <div class="proj-meta"><span class="tag">studio</span><span class="year">2023</span></div>
+          <div class="proj-info"><span class="proj-num">08</span><span class="proj-title">Young Israel of Scarsdale</span></div>
+          <div class="proj-meta"><span class="tag">professional</span><span class="year">Fall 2025</span></div>
         </div>
       </button>
     </div>
     <div class="details">
-      <article class="proj-detail" id="detail-threshold" hidden>
-        <div class="pd-head"><h3 class="pd-title">Threshold Systems</h3><button class="pd-close">close ×</button></div>
-        <div class="pd-hero"><img src="images/threshold.jpg" alt="" loading="lazy"></div>
-        <div class="pd-pills"><span>Cooper Union Studio</span><span>Parametric Design</span><span>2024</span></div>
-        <div class="pd-body">
-          <p>Parametric boundary conditions as spatial negotiators between program and structure. The project treats thresholds — edges, transitions, in-between zones — as design drivers rather than residual space.</p>
-          <p>A family of threshold conditions generated from shared rules shows how small shifts in parameters produce very different spatial experiences.</p>
+      <article class="proj-detail" id="detail-living-street" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Living Street</h3><p class="pd-subtitle">Reparative Infrastructure in Flushing</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig wide pd-lead"><img src="projects/01-living-street/images/01-street-perspective.jpg" alt="Proposed civic commons beneath the LIRR viaduct" loading="lazy" width="1686" height="840"><figcaption>Proposed civic commons beneath the LIRR viaduct</figcaption></figure>
+        <div class="pd-pills"><span>B.Arch Thesis Project, The Cooper Union</span><span>2024–2025</span><span>Flushing, Queens, NY</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Individual thesis</dd></div><div><dt>Instructor</dt><dd>Prof. Guido Zuliani</dd></div></dl>
+        <div class="pd-body"><p>This project investigates the spatial conditions of informality along the LIRR railway embankment in Flushing, Queens, where large-scale infrastructure both connects regions and fragments local communities. As a physical and symbolic barrier, the embankment imposes a rigid division within the neighborhood: its elevated tracks and fenced edges cut through the urban fabric, producing long stretches of inaccessible, underutilized space. These infrastructural voids, though centrally located, are often dismissed as leftover or undesirable.</p><p>Yet within them, a parallel urban life unfolds. Informal street vendors, predominantly elderly Chinese immigrants, adapt to these spatial margins, operating without legal permits, shelter, or access to basic services. Their vending setups speak to both resilience and exclusion: makeshift tables, crates, and carts line the sidewalk edge, often just feet away from the blank infrastructural wall. These practices are central to Flushing’s street life and economy but remain politically invisible, marginalized by a regulatory system that criminalizes informality. The project asks how these infrastructural blind spots might be reimagined, not as voids to be erased, but as civic thresholds where informal economies are not only acknowledged, but spatially sustained.</p><p>In response, the project proposes a reparative design strategy that transforms the void beneath the embankment into a linear civic commons: an adaptable, semi-sheltered corridor that supports street vending, community use, and public utilities. Rather than adding new structures on top of or beside the embankment, the design carves directly into its mass, hollowing out a series of vaulted bays between existing structural columns. These incisions create continuity without erasure, offering vendors a protected environment with electricity and water access. Each bay is a flexible zone that accommodates different vending formats while allowing customization and informal appropriation with vendors’ own tools.</p><p>The spatial design is paired with “Sidewalk Tactics,” a foldable zine distributed on-site that outlines vendors’ rights, hygiene practices, and spatial protocols. Rather than formalizing informality, the project frames infrastructure as a platform for care, resilience, and redistribution, envisioning public space that supports those who have long been excluded from it.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/01-living-street/images/02-site-photo-viaduct.jpg" alt="Vending beneath the viaduct, site photograph" loading="lazy" width="530" height="530"><figcaption>Vending beneath the viaduct, site photograph</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/03-site-photo-goods.jpg" alt="Vendor goods laid out on the sidewalk" loading="lazy" width="531" height="532"><figcaption>Vendor goods laid out on the sidewalk</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/04-vending-tools.jpg" alt="Vending Tools — an observation on the spatial practice of vending" loading="lazy" width="844" height="844"><figcaption>Vending Tools — an observation on the spatial practice of vending</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/05-street-axonometric.jpg" alt="Street Axonometric — vendors gather underneath the LIRR viaduct on Main St." loading="lazy" width="847" height="847"><figcaption>Street Axonometric — vendors gather underneath the LIRR viaduct on Main St.</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/01-living-street/images/06-street-elevation.jpg" alt="Street Elevation — vendors gather underneath the LIRR viaduct on Main St." loading="lazy" width="1068" height="513"><figcaption>Street Elevation — vendors gather underneath the LIRR viaduct on Main St.</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/07-sidewalk-tactics-map.jpg" alt="Sidewalk Tactics — guide map helping vendors locate nearby infrastructure and utilities" loading="lazy" width="851" height="960"><figcaption>Sidewalk Tactics — guide map helping vendors locate nearby infrastructure and utilities</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/08-movement-analysis.jpg" alt="Movement Analysis — vendors settle in the most condensed pedestrian zone" loading="lazy" width="845" height="966"><figcaption>Movement Analysis — vendors settle in the most condensed pedestrian zone</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/09-bay-axonometric.jpg" alt="Axonometric of the carved vaulted bays" loading="lazy" width="1162" height="687"><figcaption>Axonometric of the carved vaulted bays</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/10-interior-bay.jpg" alt="Interior of a vending bay" loading="lazy" width="569" height="569"><figcaption>Interior of a vending bay</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/01-living-street/images/11-interior-passage.jpg" alt="Passage through the embankment" loading="lazy" width="569" height="569"><figcaption>Passage through the embankment</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/01-living-street/images/12-model-perspective.jpg" alt="Physical model — vaulted canopy and bays" loading="lazy" width="1686" height="619"><figcaption>Physical model — vaulted canopy and bays</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/01-living-street/images/13-model-elevation.jpg" alt="Physical model — elevation" loading="lazy" width="1686" height="522"><figcaption>Physical model — elevation</figcaption></figure>
         </div>
-        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
       </article>
-      <article class="proj-detail" id="detail-matintel" hidden>
-        <div class="pd-head"><h3 class="pd-title">Material Intelligence</h3><button class="pd-close">close ×</button></div>
-        <div class="pd-hero"><img src="images/material.jpg" alt="" loading="lazy"></div>
-        <div class="pd-pills"><span>Cooper Union Studio</span><span>Robotic Fabrication</span><span>2024</span></div>
-        <div class="pd-body">
-          <p>Robotic fabrication workflows for non-standard timber assemblies at architectural scale — a design-to-fabrication pipeline that accounts for grain, knots, and moisture rather than treating timber as uniform.</p>
-          <p>Each joint is a set of constraints the robot resolves per piece of wood, producing assemblies that are structurally consistent but visually varied.</p>
+      <article class="proj-detail" id="detail-microscopic-infrastructures" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Microscopic Infrastructures</h3><p class="pd-subtitle">Tracking Pollen in Chicago</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/03-microscopic-infrastructures/images/01-river-collage.jpg" alt="Floating pollen collector on the Chicago River" loading="lazy" width="749" height="749"><figcaption>Floating pollen collector on the Chicago River <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+        <div class="pd-pills"><span>Design IV, The Cooper Union</span><span>Spring 2024</span><span>Chicago, IL</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative project (3 people); credits per image</dd></div><div><dt>Instructor</dt><dd>Prof. Nahyun Hwang</dd></div><div><dt>With</dt><dd>Zara Zulfigar, Natalia Boumatar</dd></div></dl>
+        <div class="pd-body"><p>This project investigates the spatial practices between human bodies, pollinators, and urban environments through the lens of airborne pollen. Set in Chicago, a modern city shaped by fragmented green corridors and seasonal extremes, we explored how pollen functions both as a biological necessity and a spatial agent. Historical research into 19th-century “pollen-free” tourism, where curated landscapes were marketed as therapeutic escapes from urban allergens, revealed how environmental control was deeply connected to spatial design and manipulation. Rather than treating pollen as something to be eliminated, we reframed it as a material that could be observed, interpreted, and thoughtfully integrated into urban systems.</p><p>Informed by this research, we developed three site-specific interventions: a floating pollen collector on the Chicago River, a pollinator habitat in a vacant lot in the Park Manor community, and a trackside habitat embedded into Chicago’s rail infrastructure. Each responds to ecological and atmospheric conditions, forming a speculative network for sensing, supporting, and coexisting with airborne ecologies. Through mapping, drawing, and spatial installation, the project makes the invisible visible and envisions ecological monitoring not only as a scientific practice but also as a civic and spatial one.</p><h4 class="pd-sub">Catering for Escape</h4><p class="pd-sub-credit">Yinuo Liu</p><p>This research drawing explores the socio-spatial history of Bethlehem, a 19th-century wellness destination known as “ragweed-free.” By tracing the mythology of “the wilderness cure” for hay fever, from cocaine tablets to architecture that promised clean air, it critiques the commodification of healing and the erasure of labor behind curated leisure landscapes. Combining archival advertisements, mapped patient origins, and speculative vignettes, the drawing visualizes the entanglement of health, spatial practices, and environmental control.</p><h4 class="pd-sub">Ragweed</h4><p class="pd-sub-credit">Natalia Boumatar</p><p>Invisible yet pervasive, ragweed often thrives in infrastructural voids and marginalized zones. This research drawing looks at the environment, infrastructure, and human bodies in relation to ragweed pollen. Framing the allergen as more than a seasonal nuisance, the work repositions it as a spatial disruptor that infiltrates respiratory systems, migratory ecologies, and urban infrastructures alike. Layering scientific diagrams and landscape sections, it exposes how seemingly natural phenomena are shaped by uneven environmental policies and zoning practices.</p><h4 class="pd-sub">Floating Pollen Collector</h4><p class="pd-sub-credit">Drawings by Yinuo Liu</p><p>Positioned on the surface of the Chicago River, the Floating Pollen Collector is a mobile platform for capturing and visualizing airborne pollen levels across different urban microclimates. Designed to drift along the waterway, it collects environmental data through suspended filters and wind-sensitive structures while supporting aquatic-edge pollinator habitats. Combining monitoring, mobility, and ecological presence, the intervention reimagines urban waterways as active participants in environmental sensing and adaptive public-health infrastructure.</p><h4 class="pd-sub">Pollinator Habitat, Garden &amp; Track</h4><p class="pd-sub-credit">Drawings by Zara Zulfigar &amp; Natalia Boumatar</p><p>This set of interventions explores how overlooked, transitional urban spaces such as vacant gardens and rail corridors can be activated as ecological infrastructure. The Pollinator Habitat Hotel, embedded in a disused garden lot, provides layered nesting environments for native pollinators while offering a tactile, educational interface for the community. Along the train track, the Trackside Collector captures and monitors airborne pollen through wind-responsive surfaces integrated into the rail environment.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/02-collage-01.jpg" alt="Tracking Pollen — research collage" loading="lazy" width="515" height="515"><figcaption>Tracking Pollen — research collage <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/03-collage-02.jpg" alt="Tracking Pollen — research collage" loading="lazy" width="518" height="518"><figcaption>Tracking Pollen — research collage <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/04-collage-03.jpg" alt="Tracking Pollen — research collage" loading="lazy" width="516" height="515"><figcaption>Tracking Pollen — research collage <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/05-collage-04.jpg" alt="Tracking Pollen — research collage" loading="lazy" width="515" height="514"><figcaption>Tracking Pollen — research collage <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/06-collage-05.jpg" alt="Tracking Pollen — research collage" loading="lazy" width="517" height="517"><figcaption>Tracking Pollen — research collage <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/07-collage-06.jpg" alt="Tracking Pollen — research collage" loading="lazy" width="516" height="516"><figcaption>Tracking Pollen — research collage <span class="pd-credit">— Yinuo Liu &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/08-routes-of-pollen-map.jpg" alt="Routes of Pollen, Chicago — map" loading="lazy" width="1102" height="1138"><figcaption>Routes of Pollen, Chicago — map <span class="pd-credit">— Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/09-catering-for-escape.jpg" alt="Catering for Escape — research drawing" loading="lazy" width="1022" height="1418"><figcaption>Catering for Escape — research drawing <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/10-ragweed.jpg" alt="Ragweed — research drawing" loading="lazy" width="1052" height="1459"><figcaption>Ragweed — research drawing <span class="pd-credit">— Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/11-floating-collector-axon.jpg" alt="Floating Pollen Collector — axonometric" loading="lazy" width="1296" height="841"><figcaption>Floating Pollen Collector — axonometric <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/12-floating-collector-section.jpg" alt="Floating Pollen Collector — section" loading="lazy" width="1296" height="801"><figcaption>Floating Pollen Collector — section <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/13-vignette-01.jpg" alt="Floating Pollen Collector — vignette" loading="lazy" width="763" height="643"><figcaption>Floating Pollen Collector — vignette <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/14-vignette-02.jpg" alt="Floating Pollen Collector — vignette" loading="lazy" width="763" height="657"><figcaption>Floating Pollen Collector — vignette <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/15-vignette-03.jpg" alt="Floating Pollen Collector — vignette" loading="lazy" width="759" height="643"><figcaption>Floating Pollen Collector — vignette <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/16-site-model-river.jpg" alt="Tracking Pollen — collaborative site model (river edge)" loading="lazy" width="739" height="1970"><figcaption>Tracking Pollen — collaborative site model (river edge) <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/17-pollinator-habitat.jpg" alt="Pollinator Habitat Hotel — garden lot" loading="lazy" width="1081" height="1618"><figcaption>Pollinator Habitat Hotel — garden lot <span class="pd-credit">— Zara Zulfigar &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/18-trackside-plan.jpg" alt="Trackside Collector — plan along the rail corridor" loading="lazy" width="824" height="1044"><figcaption>Trackside Collector — plan along the rail corridor <span class="pd-credit">— Zara Zulfigar &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/19-pollen-cycle-diagram.jpg" alt="Pollen cycle diagram" loading="lazy" width="830" height="845"><figcaption>Pollen cycle diagram <span class="pd-credit">— Zara Zulfigar &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/20-site-model-garden.jpg" alt="Tracking Pollen — site model (garden)" loading="lazy" width="865" height="1009"><figcaption>Tracking Pollen — site model (garden) <span class="pd-credit">— Zara Zulfigar</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/03-microscopic-infrastructures/images/21-site-model-track.jpg" alt="Tracking Pollen — site model (track)" loading="lazy" width="867" height="844"><figcaption>Tracking Pollen — site model (track) <span class="pd-credit">— Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/03-microscopic-infrastructures/images/22-site-model-garden-section.jpg" alt="Tracking Pollen — site model" loading="lazy" width="795" height="399"><figcaption>Tracking Pollen — site model <span class="pd-credit">— Zara Zulfigar &amp; Natalia Boumatar</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/03-microscopic-infrastructures/images/23-site-model-track-section.jpg" alt="Tracking Pollen — site model" loading="lazy" width="795" height="278"><figcaption>Tracking Pollen — site model <span class="pd-credit">— Zara Zulfigar &amp; Natalia Boumatar</span></figcaption></figure>
         </div>
-        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
       </article>
-      <article class="proj-detail" id="detail-groundfig" hidden>
-        <div class="pd-head"><h3 class="pd-title">Ground Figures</h3><button class="pd-close">close ×</button></div>
-        <div class="pd-hero"><img src="images/ground.jpg" alt="" loading="lazy"></div>
-        <div class="pd-pills"><span>Cooper Union Studio</span><span>Urban Mapping</span><span>2023</span></div>
-        <div class="pd-body">
-          <p>Urban topography as generative field — mapping pressure, density, and movement in lower Manhattan, treating the ground as an active surface shaped by the forces acting on it.</p>
-          <p>Foot traffic, program density, and transit interchanges were layered as fields to drive the form of a ground-level intervention.</p>
+      <article class="proj-detail" id="detail-young-israel-of-scarsdale" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Young Israel of Scarsdale</h3><p class="pd-subtitle">Synagogue — Physical Model &amp; Representation</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/04-young-israel-of-scarsdale/images/01-model-aerial.jpg" alt="HO-scale physical model — aerial view" loading="lazy" width="565" height="426"><figcaption>HO-scale physical model — aerial view <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+        <div class="pd-pills"><span>Alexander Gorlin Architects</span><span>Fall 2025</span><span>Scarsdale, NY</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Physical model (lead builder), axonometric drawings, interior renderings</dd></div><div><dt>With</dt><dd>Alexander Gorlin Architects</dd></div></dl>
+        <div class="pd-body"><p>At Alexander Gorlin Architects, I worked on the Young Israel of Scarsdale synagogue project, where I was primarily responsible for constructing a 24 × 44″ HO-scale physical model. The model was entirely hand-built using foam core and related materials, and served as a key tool for design development and client communication.</p><p>The model was used to study overall massing, façade articulation, and the building’s relationship to its site at a scale that allowed both spatial clarity and material precision. In parallel, I contributed to axonometric drawings that clarified program organization, circulation, and spatial relationships across multiple levels, and assisted in producing interior renderings of public spaces, focusing on light, material continuity, and spatial proportion.</p><p>Together, the physical model, drawings, and renderings formed a cohesive representational workflow that reflects the collaborative and iterative nature of professional architectural practice.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/04-young-israel-of-scarsdale/images/02-model-entry.jpg" alt="Physical model — entry and parking court" loading="lazy" width="626" height="429"><figcaption>Physical model — entry and parking court <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/04-young-israel-of-scarsdale/images/03-model-front-elevation.jpg" alt="Physical model — street elevation" loading="lazy" width="1717" height="401"><figcaption>Physical model — street elevation <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/04-young-israel-of-scarsdale/images/04-model-rear-elevation.jpg" alt="Physical model — rear elevation with landscape" loading="lazy" width="1717" height="392"><figcaption>Physical model — rear elevation with landscape <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/04-young-israel-of-scarsdale/images/05-exploded-axonometric.jpg" alt="Exploded program axonometric — basement to second floor" loading="lazy" width="1129" height="2008"><figcaption>Exploded program axonometric — basement to second floor <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/04-young-israel-of-scarsdale/images/06-rendering-01.jpg" alt="Interior rendering" loading="lazy" width="438" height="244"><figcaption>Interior rendering <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/04-young-israel-of-scarsdale/images/07-rendering-02.jpg" alt="Interior rendering" loading="lazy" width="438" height="244"><figcaption>Interior rendering <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/04-young-israel-of-scarsdale/images/08-rendering-03.jpg" alt="Interior rendering" loading="lazy" width="438" height="243"><figcaption>Interior rendering <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/04-young-israel-of-scarsdale/images/09-rendering-04.jpg" alt="Interior rendering" loading="lazy" width="438" height="243"><figcaption>Interior rendering <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
         </div>
-        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="work-group reveal">
+    <p class="sec-label">Research &amp; Analysis</p>
+    <div class="proj-grid">
+      <button class="proj-card" data-id="robin-hood-gardens" aria-expanded="false" aria-controls="detail-robin-hood-gardens">
+        <div class="proj-thumb"><img src="projects/07-robin-hood-gardens/cover.jpg" alt="Robin Hood Gardens" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">09</span><span class="proj-title">Robin Hood Gardens</span></div>
+          <div class="proj-meta"><span class="tag">research</span><span class="year">Fall 2022</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="city-of-artists" aria-expanded="false" aria-controls="detail-city-of-artists">
+        <div class="proj-thumb"><img src="projects/08-city-of-artists/cover.jpg" alt="City of Artists" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">10</span><span class="proj-title">City of Artists</span></div>
+          <div class="proj-meta"><span class="tag">research</span><span class="year">Fall 2022</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="space-block-kamishinjo" aria-expanded="false" aria-controls="detail-space-block-kamishinjo">
+        <div class="proj-thumb"><img src="projects/09-space-block-kamishinjo/cover.jpg" alt="Space Block Kamishinjo" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">11</span><span class="proj-title">Space Block Kamishinjo</span></div>
+          <div class="proj-meta"><span class="tag">research</span><span class="year">Spring 2023</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="ikea-carbon-form" aria-expanded="false" aria-controls="detail-ikea-carbon-form">
+        <div class="proj-thumb"><img src="projects/11-ikea-carbon-form/cover.jpg" alt="Carbon Form Analysis: IKEA" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">12</span><span class="proj-title">Carbon Form Analysis: IKEA</span></div>
+          <div class="proj-meta"><span class="tag">research</span><span class="year">Spring 2023</span></div>
+        </div>
+      </button>
+    </div>
+    <div class="details">
+      <article class="proj-detail" id="detail-robin-hood-gardens" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Robin Hood Gardens</h3><p class="pd-subtitle">Housing Analysis — London</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/07-robin-hood-gardens/images/01-physical-model.jpg" alt="1/8″ = 1′ physical model" loading="lazy" width="999" height="576"><figcaption>1/8″ = 1′ physical model <span class="pd-credit">— Group work</span></figcaption></figure>
+        <div class="pd-pills"><span>Design III, The Cooper Union</span><span>Fall 2022</span><span>London, UK (precedent)</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative analysis (3 people); credits per image</dd></div><div><dt>Instructors</dt><dd>Prof. Daisy Ames, Guido Zuliani, Kaitie Lau</dd></div><div><dt>With</dt><dd>Julian Yang, Grant Peck</dd></div></dl>
+        <div class="pd-body"><p>Robin Hood Gardens was a pioneering housing complex in East London, designed by Alison and Peter Smithson and completed in 1972. As a bold experiment in post-war social housing, it embodied the Smithsons’ vision of “streets in the sky,” reimagining elevated walkways and interconnected balconies as communal arteries within the urban fabric. Though demolished in 2017, it remains a key reference point in the discourse on Brutalism and collective living.</p><p>Our analysis focused on how the “street in the sky” and the interlocking units shaped communal life. The elevated walkways acted as shared thresholds, spaces suspended between public and private realms that encouraged casual encounters and a sense of neighborhood above ground. The interlocking duplex units allowed for spatial efficiency, acoustic separation, and dual orientations, enhancing both privacy and connectivity. Together, these strategies offered a layered approach to collective housing that merged infrastructural ambition with human-scale interaction.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/02-section.jpg" alt="Section" loading="lazy" width="652" height="626"><figcaption>Section <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/03-unit-axonometric.jpg" alt="Unit axonometric" loading="lazy" width="653" height="672"><figcaption>Unit axonometric <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/04-typical-unit-axonometric.jpg" alt="Typical unit axonometric" loading="lazy" width="700" height="578"><figcaption>Typical unit axonometric <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/07-robin-hood-gardens/images/05-collage-yinuo.jpg" alt="Collage" loading="lazy" width="652" height="242"><figcaption>Collage <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/07-robin-hood-gardens/images/06-collage-julian.jpg" alt="Collage" loading="lazy" width="651" height="233"><figcaption>Collage <span class="pd-credit">— Julian Yang</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/07-typical-unit-plans.jpg" alt="Typical unit plans" loading="lazy" width="703" height="538"><figcaption>Typical unit plans <span class="pd-credit">— Grant Peck</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/08-axonometric.jpg" alt="Axonometric" loading="lazy" width="701" height="732"><figcaption>Axonometric <span class="pd-credit">— Grant Peck</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/07-robin-hood-gardens/images/09-site-map-aerial.jpg" alt="Site map" loading="lazy" width="1006" height="419"><figcaption>Site map <span class="pd-credit">— Julian Yang</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/10-site-plan.jpg" alt="Site map" loading="lazy" width="434" height="417"><figcaption>Site map <span class="pd-credit">— Grant Peck</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/11-model-detail-01.jpg" alt="Physical model" loading="lazy" width="425" height="292"><figcaption>Physical model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/07-robin-hood-gardens/images/12-model-detail-02.jpg" alt="Physical model — removable units" loading="lazy" width="554" height="288"><figcaption>Physical model — removable units <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/13-entrance-model.jpg" alt="1/4″ = 1′ entrance model" loading="lazy" width="434" height="306"><figcaption>1/4″ = 1′ entrance model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/14-unit-model.jpg" alt="Unit model" loading="lazy" width="440" height="264"><figcaption>Unit model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/07-robin-hood-gardens/images/15-unit-study-model.jpg" alt="1/8″ = 1′ unit study model" loading="lazy" width="440" height="250"><figcaption>1/8″ = 1′ unit study model <span class="pd-credit">— Grant Peck</span></figcaption></figure>
+        </div>
+      </article>
+      <article class="proj-detail" id="detail-city-of-artists" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">City of Artists</h3><p class="pd-subtitle">Housing Analysis — Paris</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/08-city-of-artists/images/01-physical-model.jpg" alt="1/8″ = 1′ physical model" loading="lazy" width="1051" height="783"><figcaption>1/8″ = 1′ physical model <span class="pd-credit">— Group work</span></figcaption></figure>
+        <div class="pd-pills"><span>Design III, The Cooper Union</span><span>Fall 2022</span><span>Paris, France (precedent)</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative analysis (3 people); credits per image</dd></div><div><dt>Instructors</dt><dd>Prof. Daisy Ames, Guido Zuliani, Kaitie Lau</dd></div><div><dt>With</dt><dd>Julian Yang, Grant Peck</dd></div></dl>
+        <div class="pd-body"><p>Located in Paris, Cité d’Artistes (City of Artists) by Michel Kagan was developed in the 1980s as part of a broader urban planning initiative aimed at revitalizing underutilized areas of the city. Designed for artists and their families, the project includes 38 individual art studios and 12 family apartments, combining residential and creative functions into a unified architectural system.</p><p>Our analysis explored how Kagan’s spatial strategies mediate the intersection of domestic life and artistic production. Rooted in a modernist rationalist framework, the design uses clear geometric forms and carefully organized circulation to balance privacy and collectivity. A key focus was the vertical circulation cores and shared access corridors, which intersect individual units and common spaces, creating both functional efficiency and opportunities for social interaction. Double-height volumes within the live-work units allow flexibility for various creative practices, while the rhythmic layout of courtyards and public walkways fosters a strong sense of community.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/02-axon-circular-building.jpg" alt="Axonometric — circular building" loading="lazy" width="489" height="737"><figcaption>Axonometric — circular building <span class="pd-credit">— Yinuo Liu &amp; Julian Yang</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/03-circulation-axonometric.jpg" alt="Circulation axonometric" loading="lazy" width="538" height="463"><figcaption>Circulation axonometric <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/04-floor-plans.jpg" alt="Floor plans and section" loading="lazy" width="668" height="1925"><figcaption>Floor plans and section <span class="pd-credit">— Yinuo Liu &amp; Julian Yang</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/05-axon-typical-unit.jpg" alt="Axonometric — typical unit" loading="lazy" width="546" height="441"><figcaption>Axonometric — typical unit <span class="pd-credit">— Grant Peck</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/06-aerial-context.jpg" alt="Site context — aerial" loading="lazy" width="523" height="536"><figcaption>Site context — aerial</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/07-circulation-model-01.jpg" alt="1/8″ = 1′ circulation model" loading="lazy" width="481" height="347"><figcaption>1/8″ = 1′ circulation model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/08-circulation-model-02.jpg" alt="1/8″ = 1′ circulation model" loading="lazy" width="481" height="273"><figcaption>1/8″ = 1′ circulation model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/09-site-model.jpg" alt="1/16″ = 1′ site plan model" loading="lazy" width="484" height="410"><figcaption>1/16″ = 1′ site plan model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/10-entrance-model.jpg" alt="1/8″ = 1′ entrance model" loading="lazy" width="511" height="273"><figcaption>1/8″ = 1′ entrance model <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/08-city-of-artists/images/11-circular-unit-model.jpg" alt="1/8″ = 1′ circular unit model" loading="lazy" width="487" height="274"><figcaption>1/8″ = 1′ circular unit model <span class="pd-credit">— Group work</span></figcaption></figure>
+        </div>
+      </article>
+      <article class="proj-detail" id="detail-space-block-kamishinjo" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Space Block Kamishinjo</h3><p class="pd-subtitle">Housing Analysis — Osaka</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/09-space-block-kamishinjo/images/01-unit-configuration-axon.jpg" alt="Unit configuration analysis" loading="lazy" width="1043" height="944"><figcaption>Unit configuration analysis</figcaption></figure>
+        <div class="pd-pills"><span>Design III, The Cooper Union</span><span>Spring 2023</span><span>Osaka, Japan (precedent)</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Analysis</dd></div><div><dt>Instructors</dt><dd>Prof. Mersiha Veledar, Daisy Ames, Nader Tehrani</dd></div></dl>
+        <div class="pd-body"><p>Space Block Kamishinjo, built on the site of a former public bath, sits within a dense and varied urban fabric. As the first built application of the Basic Space Blocks (BSB) theory, the project introduces a modular system of spatial composition based on cubic units, each measuring 2.4 meters per side, that aggregate into complex, interlocking forms. Rather than organizing space through conventional floor plans, the design prioritizes spatial sequencing and inhabitable volumes; functional elements such as kitchens and bathrooms are introduced secondarily.</p><p>Our analysis investigated how this system redefines the relationship between structure and use, generating unexpected light paths, unconventional airflows, and a living environment that challenges the homogeneity of typical apartment typologies. The Kamishinjo prototype serves as a critical reference in the ongoing evolution of the Space Block series, influencing later iterations in Hanoi.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/09-space-block-kamishinjo/images/02-atmospheric-collage-01.jpg" alt="Atmospheric collage" loading="lazy" width="914" height="914"><figcaption>Atmospheric collage</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/09-space-block-kamishinjo/images/03-atmospheric-collage-02.jpg" alt="Atmospheric collage" loading="lazy" width="423" height="424"><figcaption>Atmospheric collage</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/09-space-block-kamishinjo/images/04-atmospheric-collage-03.jpg" alt="Atmospheric collage" loading="lazy" width="430" height="430"><figcaption>Atmospheric collage</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/09-space-block-kamishinjo/images/05-plans-and-sections.jpg" alt="Plans and sections" loading="lazy" width="877" height="1887"><figcaption>Plans and sections</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/09-space-block-kamishinjo/images/06-unit-plans.jpg" alt="Unit configuration — plans by floor" loading="lazy" width="456" height="984"><figcaption>Unit configuration — plans by floor</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/09-space-block-kamishinjo/images/07-unit-types.jpg" alt="Unit types" loading="lazy" width="555" height="925"><figcaption>Unit types</figcaption></figure>
+        </div>
+      </article>
+      <article class="proj-detail" id="detail-ikea-carbon-form" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Carbon Form Analysis: IKEA</h3><p class="pd-subtitle">Red Hook, Brooklyn</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig wide pd-lead"><img src="projects/11-ikea-carbon-form/images/01-site-sections.jpg" alt="Sections A–C — from neighborhood to showroom to loading dock" loading="lazy" width="1874" height="657"><figcaption>Sections A–C — from neighborhood to showroom to loading dock <span class="pd-credit">— Group work</span></figcaption></figure>
+        <div class="pd-pills"><span>Environmental Technology, The Cooper Union</span><span>Spring 2023</span><span>Red Hook, Brooklyn, NY</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative analysis (4 people)</dd></div><div><dt>Instructor</dt><dd>Prof. Elisa Iturbe</dd></div><div><dt>With</dt><dd>Tate Liang, Evan Chiang, Sofia Mercado</dd></div></dl>
+        <div class="pd-body"><p>As the world’s dominant ready-to-assemble furniture company, IKEA has established itself as an icon beyond the furniture retailer. Through merchandise, in-store restaurants, and designer collaborations, it has seamlessly integrated itself into mass culture. From the parking lot to the showroom and warehouse, IKEA as a big-box store assembles three typologies into a choreographed sequence designed to promote consumption.</p><p>Each typology is organized around a different mode of efficiency: the parking lot maximizes area with minimal turns, the showroom maximizes time spent through a wandering maze layout, and the warehouse maximizes speed through clear, indexed paths. Analyzing its urban context, including access to public and private transportation, shows how IKEA acts as a passive carbon form by privileging private cars, reproducing the current energy paradigm through its spatial and economic configuration.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/02-cover-sheet.jpg" alt="Carbon Form Analysis — cover sheet" loading="lazy" width="889" height="1013"><figcaption>Carbon Form Analysis — cover sheet <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/03-axonometric.jpg" alt="IKEA Red Hook — axonometric" loading="lazy" width="770" height="655"><figcaption>IKEA Red Hook — axonometric <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/04-typology-plans.jpg" alt="Parking lot, showroom and warehouse — three modes of efficiency" loading="lazy" width="1106" height="651"><figcaption>Parking lot, showroom and warehouse — three modes of efficiency <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/05-red-hook-organization.jpg" alt="IKEA Red Hook — program organization" loading="lazy" width="370" height="648"><figcaption>IKEA Red Hook — program organization <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/06-storefront-organizations.jpg" alt="Organization diagrams of IKEA storefronts" loading="lazy" width="581" height="636"><figcaption>Organization diagrams of IKEA storefronts <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/07-transit-map.jpg" alt="Transit access map" loading="lazy" width="449" height="617"><figcaption>Transit access map <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/11-ikea-carbon-form/images/08-site-map.jpg" alt="Site location map" loading="lazy" width="448" height="617"><figcaption>Site location map <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/11-ikea-carbon-form/images/09-journey-diagram.jpg" alt="Journey diagram" loading="lazy" width="905" height="378"><figcaption>Journey diagram <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/11-ikea-carbon-form/images/10-system-diagram.jpg" alt="System diagram" loading="lazy" width="852" height="415"><figcaption>System diagram <span class="pd-credit">— Group work</span></figcaption></figure>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="work-group reveal">
+    <p class="sec-label">Making &amp; Drawing</p>
+    <div class="proj-grid">
+      <button class="proj-card" data-id="inflatable-chair" aria-expanded="false" aria-controls="detail-inflatable-chair">
+        <div class="proj-thumb"><img src="projects/05-inflatable-chair/cover.jpg" alt="Inflatable Chair" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">13</span><span class="proj-title">Inflatable Chair</span></div>
+          <div class="proj-meta"><span class="tag">making</span><span class="year">Spring 2023</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="jau-bus-terminal-column" aria-expanded="false" aria-controls="detail-jau-bus-terminal-column">
+        <div class="proj-thumb"><img src="projects/06-jau-bus-terminal-column/cover.jpg" alt="Jaú Bus Terminal Column" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">14</span><span class="proj-title">Jaú Bus Terminal Column</span></div>
+          <div class="proj-meta"><span class="tag">making</span><span class="year">Fall 2022</span></div>
+        </div>
+      </button>
+      <button class="proj-card" data-id="freehand-drawing" aria-expanded="false" aria-controls="detail-freehand-drawing">
+        <div class="proj-thumb"><img src="projects/12-freehand-drawing/cover.jpg" alt="Freehand Drawing" loading="lazy" width="400" height="250"></div>
+        <div class="proj-foot">
+          <div class="proj-info"><span class="proj-num">15</span><span class="proj-title">Freehand Drawing</span></div>
+          <div class="proj-meta"><span class="tag">drawing</span><span class="year">Fall 2024</span></div>
+        </div>
+      </button>
+    </div>
+    <div class="details">
+      <article class="proj-detail" id="detail-inflatable-chair" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Inflatable Chair</h3><p class="pd-subtitle">Low-Carbon, Collapsible Furniture</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/05-inflatable-chair/images/01-in-use-motion.jpg" alt="The chair in use" loading="lazy" width="1143" height="965"><figcaption>The chair in use</figcaption></figure>
+        <div class="pd-pills"><span>Environmental Technology, The Cooper Union</span><span>Spring 2023</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative project (3 people)</dd></div><div><dt>Instructor</dt><dd>Prof. Pamela Cabrera</dd></div><div><dt>With</dt><dd>Tate Liang, Evan Chiang</dd></div></dl>
+        <div class="pd-body"><p>Focusing on the carbon footprints of materials, the Inflatable Chair investigates how inflatable structures can serve as a lightweight, collapsible, and sustainable alternative to conventional furniture. Traditional furniture often relies on dense, resource-intensive materials such as foam, fabric, and metal hardware, which contribute significantly to embodied carbon and transport inefficiencies. This project challenges that norm by using air, an ephemeral, weightless material, as the core component of comfort and structure.</p><p>The seat and backrest are made from heat-sealed vinyl, forming soft, air-filled cushions that support the body while dramatically reducing material weight. When deflated, these components collapse into a flat, portable sheet, allowing the entire chair to be packed, stored, or shipped with minimal volume and energy use.</p><p>The wooden frame uses a system of traditional Chinese-inspired pin joints that emphasize modularity and portability. Each element is joined without glue or screws, so the structure folds into a compact, linear package. The joints are designed for tool-free assembly, letting the frame be set up in a single step; once locked, it transforms from a flexible assembly into a rigid, stable structure capable of supporting the inflatable seat.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/02-chair-photo.jpg" alt="Inflatable Chair" loading="lazy" width="587" height="417"><figcaption>Inflatable Chair</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/03-chair-seated.jpg" alt="Seated" loading="lazy" width="587" height="418"><figcaption>Seated</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/04-exploded-axonometric.jpg" alt="Exploded axonometric" loading="lazy" width="665" height="1336"><figcaption>Exploded axonometric</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/05-frame-assembly.jpg" alt="Frame assembly — instruction manual" loading="lazy" width="1000" height="666"><figcaption>Frame assembly — instruction manual</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/06-joint-details.jpg" alt="Joint details — hybrid pin joint and double pin joint" loading="lazy" width="1000" height="665"><figcaption>Joint details — hybrid pin joint and double pin joint</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/07-joint-photo-01.jpg" alt="Pin joint detail" loading="lazy" width="623" height="620"><figcaption>Pin joint detail</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/05-inflatable-chair/images/08-joint-photo-02.jpg" alt="Pin joint detail" loading="lazy" width="618" height="618"><figcaption>Pin joint detail</figcaption></figure>
+        </div>
+      </article>
+      <article class="proj-detail" id="detail-jau-bus-terminal-column" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Jaú Bus Terminal Column</h3><p class="pd-subtitle">Scaled Cast-Concrete Reproduction</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/06-jau-bus-terminal-column/images/01-final-column.jpg" alt="Finished cast-concrete column" loading="lazy" width="1217" height="1071"><figcaption>Finished cast-concrete column</figcaption></figure>
+        <div class="pd-pills"><span>Building Technologies, The Cooper Union</span><span>Fall 2022</span><span>São Paulo (precedent)</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Collaborative project (5 people); production animation by Yinuo Liu</dd></div><div><dt>Instructor</dt><dd>Prof. Samuel Anderson</dd></div><div><dt>With</dt><dd>Riley Howard, Qrin Park, Tate Liang, Tina Chiang</dd></div></dl>
+        <div class="pd-body"><p>This project is a scaled cast-concrete reproduction of a column from the Jaú Bus Terminal in São Paulo. We analyzed the column’s flaring geometry and structural logic, which transitions from a narrow square base to a wide, branching canopy that distributes load across a large surface.</p><p>The casting process involved designing and fabricating a multi-part negative mold from CNC-cut foam, true-to-scale rebar placement, and careful sequencing of the concrete pour, simulating the real-world construction process over two weeks. The final result showcases both the sculptural beauty and the structural capacity of concrete.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/02-final-column-full.jpg" alt="Finished column on its plinth" loading="lazy" width="419" height="542"><figcaption>Finished column on its plinth</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/06-jau-bus-terminal-column/images/03-reference-photo.jpg" alt="Jaú Bus Terminal — reference photo" loading="lazy" width="701" height="340"><figcaption>Jaú Bus Terminal — reference photo</figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/06-jau-bus-terminal-column/images/04-production-animation-strip.jpg" alt="Production animation — formwork, rebar, mold and pour sequence" loading="lazy" width="2400" height="255"><figcaption>Production animation — formwork, rebar, mold and pour sequence <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/05-production-animation-final.jpg" alt="Production animation — final frame" loading="lazy" width="372" height="297"><figcaption>Production animation — final frame <span class="pd-credit">— Yinuo Liu</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/06-exploded-mold-diagram.jpg" alt="Exploded mold and formwork diagram" loading="lazy" width="525" height="997"><figcaption>Exploded mold and formwork diagram <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/07-geometry-diagram.jpg" alt="Column geometry diagram" loading="lazy" width="525" height="524"><figcaption>Column geometry diagram <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/06-jau-bus-terminal-column/images/08-section-diagrams.jpg" alt="Section diagrams" loading="lazy" width="701" height="347"><figcaption>Section diagrams <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/06-jau-bus-terminal-column/images/09-mold-layers.jpg" alt="CNC foam mold layers" loading="lazy" width="1055" height="313"><figcaption>CNC foam mold layers <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig wide"><img src="projects/06-jau-bus-terminal-column/images/10-slice-diagrams.jpg" alt="Column slices" loading="lazy" width="1055" height="348"><figcaption>Column slices <span class="pd-credit">— Group work</span></figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/11-process-01.jpg" alt="Process — demolding" loading="lazy" width="351" height="258"><figcaption>Process — demolding</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/12-process-02.jpg" alt="Process — pouring" loading="lazy" width="348" height="258"><figcaption>Process — pouring</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/13-process-03.jpg" alt="Process — rebar in the foam mold" loading="lazy" width="351" height="259"><figcaption>Process — rebar in the foam mold</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/06-jau-bus-terminal-column/images/14-process-04.jpg" alt="Process — mold assembly" loading="lazy" width="352" height="263"><figcaption>Process — mold assembly</figcaption></figure>
+        </div>
+      </article>
+      <article class="proj-detail" id="detail-freehand-drawing" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">Freehand Drawing</h3><p class="pd-subtitle">Studies in Blackness and Tone</p></div><button class="pd-close">close ×</button></div>
+        <figure class="pd-fig pd-lead"><img src="projects/12-freehand-drawing/images/01-thoughts.jpg" alt="Thoughts — a study of surrealism and emotion through linework and negative space" loading="lazy" width="1057" height="1302"><figcaption>Thoughts — a study of surrealism and emotion through linework and negative space</figcaption></figure>
+        <div class="pd-pills"><span>Freehand Drawing, The Cooper Union</span><span>Fall 2024</span></div>
+        <dl class="pd-meta"><div><dt>Role</dt><dd>Individual</dd></div><div><dt>Instructor</dt><dd>Prof. Sue Gussow</dd></div></dl>
+        <div class="pd-body"><p>This body of work began as a study of master drawings. I closely observed and reinterpreted the techniques of artists such as Käthe Kollwitz, Odilon Redon, and others whose work expresses emotional depth through tonal intensity. I focused on how blackness, both as a material and as a concept, could be constructed through accumulated marks.</p><p>In early studies, I examined how shadows were not simply filled areas, but spaces slowly built up through smudging, layering, and erasure. Each technique introduced a different texture, and each texture altered the quality of darkness in the narrative. As I moved into composition, I began thinking of black not as absence, but as weight and presence, pulling focus and creating contrast. I layered different strategies together, often revisiting a single area over and over to create depth across different levels of grey.</p></div>
+        <div class="pd-gallery">
+          <figure class="pd-fig"><img src="projects/12-freehand-drawing/images/02-fabric-study.jpg" alt="Early study of fabric, after Leonardo da Vinci" loading="lazy" width="689" height="913"><figcaption>Early study of fabric, after Leonardo da Vinci</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/12-freehand-drawing/images/03-composition-daumier-rego.jpg" alt="Composition practice, after Honoré Daumier &amp; Paula Rego" loading="lazy" width="748" height="914"><figcaption>Composition practice, after Honoré Daumier &amp; Paula Rego</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/12-freehand-drawing/images/04-composition-kollwitz-redon.jpg" alt="Composition practice, after Käthe Kollwitz &amp; Odilon Redon" loading="lazy" width="960" height="779"><figcaption>Composition practice, after Käthe Kollwitz &amp; Odilon Redon</figcaption></figure>
+          <figure class="pd-fig"><img src="projects/12-freehand-drawing/images/05-hand-gesture-chinese-character.jpg" alt="Hand gesture practice — Chinese characters" loading="lazy" width="474" height="776"><figcaption>Hand gesture practice — Chinese characters</figcaption></figure>
+        </div>
       </article>
     </div>
   </div>
@@ -454,6 +731,8 @@ footer .mail { color: var(--accent); }
 
 </div>
 
+<div class="lightbox" hidden><img alt=""><p></p></div>
+
 <script>
 /* scroll reveal */
 (function () {
@@ -491,6 +770,18 @@ footer .mail { color: var(--accent); }
   });
   document.querySelectorAll('.pd-close').forEach(btn => btn.addEventListener('click', closeAll));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+})();
+/* lightbox for project images */
+(function () {
+  const box = document.querySelector('.lightbox');
+  const img = box.querySelector('img'), cap = box.querySelector('p');
+  document.querySelectorAll('.pd-fig img').forEach(el => el.addEventListener('click', () => {
+    img.src = el.currentSrc || el.src; img.alt = el.alt;
+    cap.textContent = el.closest('figure').querySelector('figcaption').textContent;
+    box.hidden = false;
+  }));
+  box.addEventListener('click', () => { box.hidden = true; img.removeAttribute('src'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') box.hidden = true; });
 })();
 </script>
 </body>

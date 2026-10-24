@@ -1,0 +1,81 @@
+{
+  "slug": "freehand-drawing",
+  "order": 12,
+  "featured": false,
+  "title": "Freehand Drawing",
+  "subtitle": "Studies in Blackness and Tone",
+  "context": "Freehand Drawing, The Cooper Union",
+  "year": 2024,
+  "term": "Fall 2024",
+  "instructors": [
+    "Prof. Sue Gussow"
+  ],
+  "collaborators": [],
+  "role": "Individual",
+  "tags": [
+    "charcoal",
+    "drawing",
+    "master studies"
+  ],
+  "summary": "Charcoal studies after Kollwitz, Redon, Daumier and Rego, treating black not as absence but as weight and presence.",
+  "description": [
+    "This body of work began as a study of master drawings. I closely observed and reinterpreted the techniques of artists such as Käthe Kollwitz, Odilon Redon, and others whose work expresses emotional depth through tonal intensity. I focused on how blackness, both as a material and as a concept, could be constructed through accumulated marks.",
+    "In early studies, I examined how shadows were not simply filled areas, but spaces slowly built up through smudging, layering, and erasure. Each technique introduced a different texture, and each texture altered the quality of darkness in the narrative. As I moved into composition, I began thinking of black not as absence, but as weight and presence, pulling focus and creating contrast. I layered different strategies together, often revisiting a single area over and over to create depth across different levels of grey."
+  ],
+  "category": "art",
+  "category_label": "Drawing & Art",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-thoughts.jpg",
+      "caption": "Thoughts — a study of surrealism and emotion through linework and negative space",
+      "credit": "Yinuo Liu",
+      "kind": "hero",
+      "width": 1057,
+      "height": 1302,
+      "is_hero": true,
+      "source": "portfolio PDF p.15"
+    },
+    {
+      "file": "images/02-fabric-study.jpg",
+      "caption": "Early study of fabric, after Leonardo da Vinci",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 689,
+      "height": 913,
+      "is_hero": false,
+      "source": "portfolio PDF p.15"
+    },
+    {
+      "file": "images/03-composition-daumier-rego.jpg",
+      "caption": "Composition practice, after Honoré Daumier & Paula Rego",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 748,
+      "height": 914,
+      "is_hero": false,
+      "source": "portfolio PDF p.15"
+    },
+    {
+      "file": "images/04-composition-kollwitz-redon.jpg",
+      "caption": "Composition practice, after Käthe Kollwitz & Odilon Redon",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 960,
+      "height": 779,
+      "is_hero": false,
+      "source": "portfolio PDF p.15"
+    },
+    {
+      "file": "images/05-hand-gesture-chinese-character.jpg",
+      "caption": "Hand gesture practice — Chinese characters",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 474,
+      "height": 776,
+      "is_hero": false,
+      "source": "portfolio PDF p.15"
+    }
+  ]
+}

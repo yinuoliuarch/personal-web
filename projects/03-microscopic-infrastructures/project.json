@@ -1,0 +1,289 @@
+{
+  "slug": "microscopic-infrastructures",
+  "order": 3,
+  "featured": true,
+  "title": "Microscopic Infrastructures",
+  "subtitle": "Tracking Pollen in Chicago",
+  "context": "Design IV, The Cooper Union",
+  "year": 2024,
+  "term": "Spring 2024",
+  "location": "Chicago, IL",
+  "instructors": [
+    "Prof. Nahyun Hwang"
+  ],
+  "collaborators": [
+    "Zara Zulfigar",
+    "Natalia Boumatar"
+  ],
+  "role": "Collaborative project (3 people); credits per image",
+  "tags": [
+    "ecology",
+    "environmental sensing",
+    "mapping",
+    "speculative design",
+    "site model"
+  ],
+  "summary": "Three site-specific interventions in Chicago that treat airborne pollen as a material to observe and design with, rather than eliminate.",
+  "description": [
+    "This project investigates the spatial practices between human bodies, pollinators, and urban environments through the lens of airborne pollen. Set in Chicago, a modern city shaped by fragmented green corridors and seasonal extremes, we explored how pollen functions both as a biological necessity and a spatial agent. Historical research into 19th-century “pollen-free” tourism, where curated landscapes were marketed as therapeutic escapes from urban allergens, revealed how environmental control was deeply connected to spatial design and manipulation. Rather than treating pollen as something to be eliminated, we reframed it as a material that could be observed, interpreted, and thoughtfully integrated into urban systems.",
+    "Informed by this research, we developed three site-specific interventions: a floating pollen collector on the Chicago River, a pollinator habitat in a vacant lot in the Park Manor community, and a trackside habitat embedded into Chicago’s rail infrastructure. Each responds to ecological and atmospheric conditions, forming a speculative network for sensing, supporting, and coexisting with airborne ecologies. Through mapping, drawing, and spatial installation, the project makes the invisible visible and envisions ecological monitoring not only as a scientific practice but also as a civic and spatial one."
+  ],
+  "sections": [
+    {
+      "title": "Catering for Escape",
+      "credit": "Yinuo Liu",
+      "text": "This research drawing explores the socio-spatial history of Bethlehem, a 19th-century wellness destination known as “ragweed-free.” By tracing the mythology of “the wilderness cure” for hay fever, from cocaine tablets to architecture that promised clean air, it critiques the commodification of healing and the erasure of labor behind curated leisure landscapes. Combining archival advertisements, mapped patient origins, and speculative vignettes, the drawing visualizes the entanglement of health, spatial practices, and environmental control."
+    },
+    {
+      "title": "Ragweed",
+      "credit": "Natalia Boumatar",
+      "text": "Invisible yet pervasive, ragweed often thrives in infrastructural voids and marginalized zones. This research drawing looks at the environment, infrastructure, and human bodies in relation to ragweed pollen. Framing the allergen as more than a seasonal nuisance, the work repositions it as a spatial disruptor that infiltrates respiratory systems, migratory ecologies, and urban infrastructures alike. Layering scientific diagrams and landscape sections, it exposes how seemingly natural phenomena are shaped by uneven environmental policies and zoning practices."
+    },
+    {
+      "title": "Floating Pollen Collector",
+      "credit": "Drawings by Yinuo Liu",
+      "text": "Positioned on the surface of the Chicago River, the Floating Pollen Collector is a mobile platform for capturing and visualizing airborne pollen levels across different urban microclimates. Designed to drift along the waterway, it collects environmental data through suspended filters and wind-sensitive structures while supporting aquatic-edge pollinator habitats. Combining monitoring, mobility, and ecological presence, the intervention reimagines urban waterways as active participants in environmental sensing and adaptive public-health infrastructure."
+    },
+    {
+      "title": "Pollinator Habitat, Garden & Track",
+      "credit": "Drawings by Zara Zulfigar & Natalia Boumatar",
+      "text": "This set of interventions explores how overlooked, transitional urban spaces such as vacant gardens and rail corridors can be activated as ecological infrastructure. The Pollinator Habitat Hotel, embedded in a disused garden lot, provides layered nesting environments for native pollinators while offering a tactile, educational interface for the community. Along the train track, the Trackside Collector captures and monitors airborne pollen through wind-responsive surfaces integrated into the rail environment."
+    }
+  ],
+  "category": "design",
+  "category_label": "Architecture & Urban Design",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-river-collage.jpg",
+      "caption": "Floating pollen collector on the Chicago River",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "hero",
+      "width": 749,
+      "height": 749,
+      "is_hero": true,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/02-collage-01.jpg",
+      "caption": "Tracking Pollen — research collage",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "collage",
+      "width": 515,
+      "height": 515,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/03-collage-02.jpg",
+      "caption": "Tracking Pollen — research collage",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "collage",
+      "width": 518,
+      "height": 518,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/04-collage-03.jpg",
+      "caption": "Tracking Pollen — research collage",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "collage",
+      "width": 516,
+      "height": 515,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/05-collage-04.jpg",
+      "caption": "Tracking Pollen — research collage",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "collage",
+      "width": 515,
+      "height": 514,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/06-collage-05.jpg",
+      "caption": "Tracking Pollen — research collage",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "collage",
+      "width": 517,
+      "height": 517,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/07-collage-06.jpg",
+      "caption": "Tracking Pollen — research collage",
+      "credit": "Yinuo Liu & Natalia Boumatar",
+      "kind": "collage",
+      "width": 516,
+      "height": 516,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/08-routes-of-pollen-map.jpg",
+      "caption": "Routes of Pollen, Chicago — map",
+      "credit": "Natalia Boumatar",
+      "kind": "map",
+      "width": 1102,
+      "height": 1138,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/09-catering-for-escape.jpg",
+      "caption": "Catering for Escape — research drawing",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 1022,
+      "height": 1418,
+      "is_hero": false,
+      "source": "portfolio PDF p.5"
+    },
+    {
+      "file": "images/10-ragweed.jpg",
+      "caption": "Ragweed — research drawing",
+      "credit": "Natalia Boumatar",
+      "kind": "drawing",
+      "width": 1052,
+      "height": 1459,
+      "is_hero": false,
+      "source": "portfolio PDF p.5"
+    },
+    {
+      "file": "images/11-floating-collector-axon.jpg",
+      "caption": "Floating Pollen Collector — axonometric",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 1296,
+      "height": 841,
+      "is_hero": false,
+      "source": "portfolio PDF p.6"
+    },
+    {
+      "file": "images/12-floating-collector-section.jpg",
+      "caption": "Floating Pollen Collector — section",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 1296,
+      "height": 801,
+      "is_hero": false,
+      "source": "portfolio PDF p.6"
+    },
+    {
+      "file": "images/13-vignette-01.jpg",
+      "caption": "Floating Pollen Collector — vignette",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 763,
+      "height": 643,
+      "is_hero": false,
+      "source": "portfolio PDF p.6"
+    },
+    {
+      "file": "images/14-vignette-02.jpg",
+      "caption": "Floating Pollen Collector — vignette",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 763,
+      "height": 657,
+      "is_hero": false,
+      "source": "portfolio PDF p.6"
+    },
+    {
+      "file": "images/15-vignette-03.jpg",
+      "caption": "Floating Pollen Collector — vignette",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 759,
+      "height": 643,
+      "is_hero": false,
+      "source": "portfolio PDF p.6"
+    },
+    {
+      "file": "images/16-site-model-river.jpg",
+      "caption": "Tracking Pollen — collaborative site model (river edge)",
+      "credit": "Yinuo Liu",
+      "kind": "model",
+      "width": 739,
+      "height": 1970,
+      "is_hero": false,
+      "source": "portfolio PDF p.6"
+    },
+    {
+      "file": "images/17-pollinator-habitat.jpg",
+      "caption": "Pollinator Habitat Hotel — garden lot",
+      "credit": "Zara Zulfigar & Natalia Boumatar",
+      "kind": "drawing",
+      "width": 1081,
+      "height": 1618,
+      "is_hero": false,
+      "source": "portfolio PDF p.7"
+    },
+    {
+      "file": "images/18-trackside-plan.jpg",
+      "caption": "Trackside Collector — plan along the rail corridor",
+      "credit": "Zara Zulfigar & Natalia Boumatar",
+      "kind": "drawing",
+      "width": 824,
+      "height": 1044,
+      "is_hero": false,
+      "source": "portfolio PDF p.7"
+    },
+    {
+      "file": "images/19-pollen-cycle-diagram.jpg",
+      "caption": "Pollen cycle diagram",
+      "credit": "Zara Zulfigar & Natalia Boumatar",
+      "kind": "diagram",
+      "width": 830,
+      "height": 845,
+      "is_hero": false,
+      "source": "portfolio PDF p.7"
+    },
+    {
+      "file": "images/20-site-model-garden.jpg",
+      "caption": "Tracking Pollen — site model (garden)",
+      "credit": "Zara Zulfigar",
+      "kind": "model",
+      "width": 865,
+      "height": 1009,
+      "is_hero": false,
+      "source": "portfolio PDF p.7"
+    },
+    {
+      "file": "images/21-site-model-track.jpg",
+      "caption": "Tracking Pollen — site model (track)",
+      "credit": "Natalia Boumatar",
+      "kind": "model",
+      "width": 867,
+      "height": 844,
+      "is_hero": false,
+      "source": "portfolio PDF p.7"
+    },
+    {
+      "file": "images/22-site-model-garden-section.jpg",
+      "caption": "Tracking Pollen — site model",
+      "credit": "Zara Zulfigar & Natalia Boumatar",
+      "kind": "model",
+      "width": 795,
+      "height": 399,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    },
+    {
+      "file": "images/23-site-model-track-section.jpg",
+      "caption": "Tracking Pollen — site model",
+      "credit": "Zara Zulfigar & Natalia Boumatar",
+      "kind": "model",
+      "width": 795,
+      "height": 278,
+      "is_hero": false,
+      "source": "portfolio PDF p.4"
+    }
+  ]
+}

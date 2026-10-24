@@ -1,0 +1,105 @@
+{
+  "slug": "space-block-kamishinjo",
+  "order": 9,
+  "featured": false,
+  "title": "Space Block Kamishinjo",
+  "subtitle": "Housing Analysis — Osaka",
+  "context": "Design III, The Cooper Union",
+  "year": 2023,
+  "term": "Spring 2023",
+  "location": "Osaka, Japan (precedent)",
+  "instructors": [
+    "Prof. Mersiha Veledar",
+    "Daisy Ames",
+    "Nader Tehrani"
+  ],
+  "collaborators": [],
+  "role": "Analysis",
+  "tags": [
+    "housing",
+    "precedent analysis",
+    "modular systems",
+    "atmosphere"
+  ],
+  "summary": "An analysis of the first built application of Basic Space Block theory, where 2.4 m cubic units aggregate into interlocking dwellings.",
+  "description": [
+    "Space Block Kamishinjo, built on the site of a former public bath, sits within a dense and varied urban fabric. As the first built application of the Basic Space Blocks (BSB) theory, the project introduces a modular system of spatial composition based on cubic units, each measuring 2.4 meters per side, that aggregate into complex, interlocking forms. Rather than organizing space through conventional floor plans, the design prioritizes spatial sequencing and inhabitable volumes; functional elements such as kitchens and bathrooms are introduced secondarily.",
+    "Our analysis investigated how this system redefines the relationship between structure and use, generating unexpected light paths, unconventional airflows, and a living environment that challenges the homogeneity of typical apartment typologies. The Kamishinjo prototype serves as a critical reference in the ongoing evolution of the Space Block series, influencing later iterations in Hanoi."
+  ],
+  "category": "research",
+  "category_label": "Precedent Research & Analysis",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-unit-configuration-axon.jpg",
+      "caption": "Unit configuration analysis",
+      "credit": "Yinuo Liu",
+      "kind": "hero",
+      "width": 1043,
+      "height": 944,
+      "is_hero": true,
+      "source": "portfolio PDF p.8"
+    },
+    {
+      "file": "images/02-atmospheric-collage-01.jpg",
+      "caption": "Atmospheric collage",
+      "credit": "Yinuo Liu",
+      "kind": "collage",
+      "width": 914,
+      "height": 914,
+      "is_hero": false,
+      "source": "portfolio PDF p.8"
+    },
+    {
+      "file": "images/03-atmospheric-collage-02.jpg",
+      "caption": "Atmospheric collage",
+      "credit": "Yinuo Liu",
+      "kind": "collage",
+      "width": 423,
+      "height": 424,
+      "is_hero": false,
+      "source": "portfolio PDF p.8"
+    },
+    {
+      "file": "images/04-atmospheric-collage-03.jpg",
+      "caption": "Atmospheric collage",
+      "credit": "Yinuo Liu",
+      "kind": "collage",
+      "width": 430,
+      "height": 430,
+      "is_hero": false,
+      "source": "portfolio PDF p.8"
+    },
+    {
+      "file": "images/05-plans-and-sections.jpg",
+      "caption": "Plans and sections",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 877,
+      "height": 1887,
+      "is_hero": false,
+      "source": "portfolio PDF p.8"
+    },
+    {
+      "file": "images/06-unit-plans.jpg",
+      "caption": "Unit configuration — plans by floor",
+      "credit": "Yinuo Liu",
+      "kind": "diagram",
+      "width": 456,
+      "height": 984,
+      "is_hero": false,
+      "source": "portfolio PDF p.8"
+    },
+    {
+      "file": "images/07-unit-types.jpg",
+      "caption": "Unit types",
+      "credit": "Yinuo Liu",
+      "kind": "diagram",
+      "width": 555,
+      "height": 925,
+      "is_hero": false,
+      "source": "portfolio PDF p.8"
+    }
+  ]
+}

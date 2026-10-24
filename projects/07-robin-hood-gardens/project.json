@@ -1,0 +1,188 @@
+{
+  "slug": "robin-hood-gardens",
+  "order": 7,
+  "featured": false,
+  "title": "Robin Hood Gardens",
+  "subtitle": "Housing Analysis — London",
+  "context": "Design III, The Cooper Union",
+  "year": 2022,
+  "term": "Fall 2022",
+  "location": "London, UK (precedent)",
+  "instructors": [
+    "Prof. Daisy Ames",
+    "Guido Zuliani",
+    "Kaitie Lau"
+  ],
+  "collaborators": [
+    "Julian Yang",
+    "Grant Peck"
+  ],
+  "role": "Collaborative analysis (3 people); credits per image",
+  "tags": [
+    "housing",
+    "precedent analysis",
+    "Brutalism",
+    "physical model"
+  ],
+  "summary": "An analysis of the Smithsons’ “streets in the sky” and interlocking duplex units at Robin Hood Gardens, through models, sections and collages.",
+  "description": [
+    "Robin Hood Gardens was a pioneering housing complex in East London, designed by Alison and Peter Smithson and completed in 1972. As a bold experiment in post-war social housing, it embodied the Smithsons’ vision of “streets in the sky,” reimagining elevated walkways and interconnected balconies as communal arteries within the urban fabric. Though demolished in 2017, it remains a key reference point in the discourse on Brutalism and collective living.",
+    "Our analysis focused on how the “street in the sky” and the interlocking units shaped communal life. The elevated walkways acted as shared thresholds, spaces suspended between public and private realms that encouraged casual encounters and a sense of neighborhood above ground. The interlocking duplex units allowed for spatial efficiency, acoustic separation, and dual orientations, enhancing both privacy and connectivity. Together, these strategies offered a layered approach to collective housing that merged infrastructural ambition with human-scale interaction."
+  ],
+  "category": "research",
+  "category_label": "Precedent Research & Analysis",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-physical-model.jpg",
+      "caption": "1/8″ = 1′ physical model",
+      "credit": "Group work",
+      "kind": "hero",
+      "width": 999,
+      "height": 576,
+      "is_hero": true,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/02-section.jpg",
+      "caption": "Section",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 652,
+      "height": 626,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/03-unit-axonometric.jpg",
+      "caption": "Unit axonometric",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 653,
+      "height": 672,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/04-typical-unit-axonometric.jpg",
+      "caption": "Typical unit axonometric",
+      "credit": "Yinuo Liu",
+      "kind": "drawing",
+      "width": 700,
+      "height": 578,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/05-collage-yinuo.jpg",
+      "caption": "Collage",
+      "credit": "Yinuo Liu",
+      "kind": "collage",
+      "width": 652,
+      "height": 242,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/06-collage-julian.jpg",
+      "caption": "Collage",
+      "credit": "Julian Yang",
+      "kind": "collage",
+      "width": 651,
+      "height": 233,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/07-typical-unit-plans.jpg",
+      "caption": "Typical unit plans",
+      "credit": "Grant Peck",
+      "kind": "drawing",
+      "width": 703,
+      "height": 538,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/08-axonometric.jpg",
+      "caption": "Axonometric",
+      "credit": "Grant Peck",
+      "kind": "drawing",
+      "width": 701,
+      "height": 732,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/09-site-map-aerial.jpg",
+      "caption": "Site map",
+      "credit": "Julian Yang",
+      "kind": "map",
+      "width": 1006,
+      "height": 419,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/10-site-plan.jpg",
+      "caption": "Site map",
+      "credit": "Grant Peck",
+      "kind": "map",
+      "width": 434,
+      "height": 417,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/11-model-detail-01.jpg",
+      "caption": "Physical model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 425,
+      "height": 292,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/12-model-detail-02.jpg",
+      "caption": "Physical model — removable units",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 554,
+      "height": 288,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/13-entrance-model.jpg",
+      "caption": "1/4″ = 1′ entrance model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 434,
+      "height": 306,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/14-unit-model.jpg",
+      "caption": "Unit model",
+      "credit": "Group work",
+      "kind": "model",
+      "width": 440,
+      "height": 264,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    },
+    {
+      "file": "images/15-unit-study-model.jpg",
+      "caption": "1/8″ = 1′ unit study model",
+      "credit": "Grant Peck",
+      "kind": "model",
+      "width": 440,
+      "height": 250,
+      "is_hero": false,
+      "source": "portfolio PDF p.11"
+    }
+  ]
+}

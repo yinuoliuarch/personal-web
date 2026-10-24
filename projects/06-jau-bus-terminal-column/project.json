@@ -1,0 +1,179 @@
+{
+  "slug": "jau-bus-terminal-column",
+  "order": 6,
+  "featured": false,
+  "title": "Jaú Bus Terminal Column",
+  "subtitle": "Scaled Cast-Concrete Reproduction",
+  "context": "Building Technologies, The Cooper Union",
+  "year": 2022,
+  "term": "Fall 2022",
+  "location": "São Paulo (precedent)",
+  "instructors": [
+    "Prof. Samuel Anderson"
+  ],
+  "collaborators": [
+    "Riley Howard",
+    "Qrin Park",
+    "Tate Liang",
+    "Tina Chiang"
+  ],
+  "role": "Collaborative project (5 people); production animation by Yinuo Liu",
+  "tags": [
+    "concrete",
+    "casting",
+    "CNC",
+    "fabrication",
+    "structure"
+  ],
+  "summary": "A scaled cast-concrete reproduction of a column from the Jaú Bus Terminal, built with a CNC-cut foam mold and true-to-scale rebar.",
+  "description": [
+    "This project is a scaled cast-concrete reproduction of a column from the Jaú Bus Terminal in São Paulo. We analyzed the column’s flaring geometry and structural logic, which transitions from a narrow square base to a wide, branching canopy that distributes load across a large surface.",
+    "The casting process involved designing and fabricating a multi-part negative mold from CNC-cut foam, true-to-scale rebar placement, and careful sequencing of the concrete pour, simulating the real-world construction process over two weeks. The final result showcases both the sculptural beauty and the structural capacity of concrete."
+  ],
+  "category": "making",
+  "category_label": "Fabrication & Making",
+  "cover": "cover.jpg",
+  "thumbnail": "thumb-square.jpg",
+  "images": [
+    {
+      "file": "images/01-final-column.jpg",
+      "caption": "Finished cast-concrete column",
+      "credit": null,
+      "kind": "hero",
+      "width": 1217,
+      "height": 1071,
+      "is_hero": true,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/02-final-column-full.jpg",
+      "caption": "Finished column on its plinth",
+      "credit": null,
+      "kind": "photo",
+      "width": 419,
+      "height": 542,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/03-reference-photo.jpg",
+      "caption": "Jaú Bus Terminal — reference photo",
+      "credit": null,
+      "kind": "photo",
+      "width": 701,
+      "height": 340,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/04-production-animation-strip.jpg",
+      "caption": "Production animation — formwork, rebar, mold and pour sequence",
+      "credit": "Yinuo Liu",
+      "kind": "render",
+      "width": 2400,
+      "height": 255,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/05-production-animation-final.jpg",
+      "caption": "Production animation — final frame",
+      "credit": "Yinuo Liu",
+      "kind": "render",
+      "width": 372,
+      "height": 297,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/06-exploded-mold-diagram.jpg",
+      "caption": "Exploded mold and formwork diagram",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 525,
+      "height": 997,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/07-geometry-diagram.jpg",
+      "caption": "Column geometry diagram",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 525,
+      "height": 524,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/08-section-diagrams.jpg",
+      "caption": "Section diagrams",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 701,
+      "height": 347,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/09-mold-layers.jpg",
+      "caption": "CNC foam mold layers",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 1055,
+      "height": 313,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/10-slice-diagrams.jpg",
+      "caption": "Column slices",
+      "credit": "Group work",
+      "kind": "diagram",
+      "width": 1055,
+      "height": 348,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/11-process-01.jpg",
+      "caption": "Process — demolding",
+      "credit": null,
+      "kind": "photo",
+      "width": 351,
+      "height": 258,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/12-process-02.jpg",
+      "caption": "Process — pouring",
+      "credit": null,
+      "kind": "photo",
+      "width": 348,
+      "height": 258,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/13-process-03.jpg",
+      "caption": "Process — rebar in the foam mold",
+      "credit": null,
+      "kind": "photo",
+      "width": 351,
+      "height": 259,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    },
+    {
+      "file": "images/14-process-04.jpg",
+      "caption": "Process — mold assembly",
+      "credit": null,
+      "kind": "photo",
+      "width": 352,
+      "height": 263,
+      "is_hero": false,
+      "source": "portfolio PDF p.12"
+    }
+  ]
+}
