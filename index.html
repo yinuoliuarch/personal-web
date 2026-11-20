@@ -186,6 +186,47 @@ img { max-width: 100%; display: block; }
 .lightbox p { font-size: 11px; color: #b8b8b8; text-align: center; max-width: 70ch; }
 @media (max-width: 560px) { .pd-gallery { grid-template-columns: 1fr; } }
 
+/* ── live embed (subway time map) ── */
+.embed { display: flex; flex-direction: column; gap: 8px; }
+.embed-stage { position: relative; aspect-ratio: 16 / 10; border-radius: 8px; overflow: hidden; background: #000; border: 1px solid var(--line); }
+.embed-frame { position: absolute; inset: 0; }
+.embed-frame iframe { position: absolute; left: 0; top: 0; border: 0; background: #000; transform-origin: 0 0; }
+.embed-shield {
+  position: absolute; inset: 0; z-index: 1; border: 0; padding: 0; cursor: pointer;
+  background: transparent; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 16px;
+  font: inherit; color: inherit;
+}
+.embed-shield span {
+  font-size: 10px; letter-spacing: .12em; color: #ffd60a; background: rgba(0,0,0,.82);
+  border: 1px solid rgba(255,214,10,.4); border-radius: 4px; padding: 5px 12px;
+}
+.embed-shield:hover span, .embed-shield:focus-visible span { background: #000; border-color: #ffd60a; }
+.embed.live .embed-shield { display: none; }
+.embed-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.embed-hint { font-size: 10px; color: var(--muted); }
+.embed-full, .embed-exit {
+  font: inherit; font-size: 11px; color: var(--accent); background: var(--accent-bg);
+  border: 1px solid var(--accent-line); border-radius: 4px; padding: 4px 11px; cursor: pointer; white-space: nowrap;
+}
+.embed-full:hover, .embed-exit:hover { border-color: var(--accent); }
+/* full screen: the same stage is lifted over the page, so the map keeps its state */
+.embed.full .embed-stage {
+  position: fixed; inset: 0; z-index: 200; aspect-ratio: auto; border: 0; border-radius: 0;
+  padding-top: 44px;
+}
+.embed.full .embed-frame { inset: 44px 0 0 0; }
+.embed-top { display: none; }
+.embed.full .embed-top {
+  display: flex; position: absolute; top: 0; left: 0; right: 0; height: 44px; z-index: 2;
+  align-items: center; justify-content: space-between; gap: 12px;
+  padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px));
+  background: #000; border-bottom: 1px solid #1e1e1e; color: #b8b8b8; font-size: 11px;
+}
+.embed-top span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.embed.full .embed-exit { color: #ffd60a; background: rgba(255,214,10,.10); border-color: rgba(255,214,10,.4); }
+body.embed-open { overflow: hidden; }
+@media (max-width: 560px) { .embed-hint { display: none; } .embed-bar { justify-content: flex-end; } }
+
 /* ── education ── */
 .degrees { display: flex; flex-direction: column; gap: 14px; }
 .degree { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
@@ -276,11 +317,11 @@ footer .mail { color: var(--accent); }
           <div class="proj-meta"><span class="tag">product</span><span class="year">2026–present</span></div>
         </div>
       </button>
-      <button class="proj-card" data-id="aretherey" aria-expanded="false" aria-controls="detail-aretherey">
-        <div class="proj-thumb"><img src="images/walk.jpg" alt="Night street with a highlighted walking route" loading="lazy" width="400" height="225"></div>
+      <button class="proj-card" data-id="subway-time-map" aria-expanded="false" aria-controls="detail-subway-time-map">
+        <div class="proj-thumb"><img src="projects/subway-time-map/cover.jpg" alt="Radial NYC subway map drawn in travel time from 116 St–Columbia University" loading="lazy" width="400" height="225"></div>
         <div class="proj-foot">
-          <div class="proj-info"><span class="proj-num">02</span><span class="proj-title">Are We There Yet?</span></div>
-          <div class="proj-meta"><span class="tag">product</span><span class="year">2026</span></div>
+          <div class="proj-info"><span class="proj-num">02</span><span class="proj-title">How Far Is New York, Really?</span></div>
+          <div class="proj-meta"><span class="tag">data viz</span><span class="year">2026</span></div>
         </div>
       </button>
     </div>
@@ -295,15 +336,22 @@ footer .mail { color: var(--accent); }
         </div>
         <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
       </article>
-      <article class="proj-detail" id="detail-aretherey" hidden>
-        <div class="pd-head"><h3 class="pd-title">Are We There Yet?</h3><button class="pd-close">close ×</button></div>
-        <div class="pd-hero"><img src="images/walk.jpg" alt="" loading="lazy"></div>
-        <div class="pd-pills"><span>Product Team Leader</span><span>CS3 VALIDATE Accelerator</span><span>2026</span></div>
-        <div class="pd-body">
-          <p>Urban walking safety product focused on nighttime pedestrian safety. Conducted user research and use-case definition to understand how people navigate unfamiliar neighborhoods at night.</p>
-          <p>Developed product strategy around safer route suggestions, drawing on lighting, foot traffic, and reported incidents in a lightweight mobile experience.</p>
+      <article class="proj-detail" id="detail-subway-time-map" hidden>
+        <div class="pd-head"><div><h3 class="pd-title">How Far Is New York, Really?</h3><p class="pd-subtitle">NYC Subway Time Map</p></div><button class="pd-close">close ×</button></div>
+        <div class="embed" data-src="projects/subway-time-map/index.html" data-title="How Far Is New York, Really? — NYC Subway Time Map">
+          <div class="embed-stage"><div class="embed-frame"></div>
+            <button class="embed-shield" type="button"><span>click to explore the map</span></button>
+          </div>
+          <div class="embed-bar">
+            <span class="embed-hint">Pick an origin, search a destination, drag to pan, scroll to zoom.</span>
+            <button class="embed-full" type="button">full screen ⤢</button>
+          </div>
         </div>
-        <div class="pd-imgs"><div class="pd-ph">image placeholder</div><div class="pd-ph">image placeholder</div></div>
+        <div class="pd-pills"><span>Interactive Data Visualization</span><span>MTA GTFS + Customer Journey Metrics</span><span>2026</span></div>
+        <div class="pd-body">
+          <p>A map of the New York City subway drawn in travel time instead of distance. From any origin station, each branch traces the fastest route to the end of a subway line, turning only at transfers; rings mark every five minutes.</p>
+          <p>Times come from the MTA GTFS weekday schedule — running time between stations, waiting time at half the scheduled headway, and minimum transfer times. Yellow adds the time the schedule leaves out: the thick segment is the average extra platform and train time from MTA’s Customer Journey-Focused Metrics, the thin one a simulated bad day at the 90th percentile.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -780,6 +828,81 @@ footer .mail { color: var(--accent); }
   }));
   box.addEventListener('click', () => { box.hidden = true; img.removeAttribute('src'); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') box.hidden = true; });
+})();
+/* live embeds: scaled desktop preview + in-page full screen (no navigation) */
+(function () {
+  const VW = 1440, MINW = 1000;   // the map is laid out for a desktop window; preview it at that size, scaled down
+  document.querySelectorAll('.embed').forEach(embed => {
+    const stage = embed.querySelector('.embed-stage');
+    const holder = embed.querySelector('.embed-frame');
+    const shield = embed.querySelector('.embed-shield');
+    const top = document.createElement('div');
+    top.className = 'embed-top';
+    top.innerHTML = '<span></span><button class="embed-exit" type="button">exit full screen ×</button>';
+    top.querySelector('span').textContent = embed.dataset.title || '';
+    stage.prepend(top);
+    let frame = null;
+
+    function fitPreview() {
+      if (!frame) return;
+      const full = embed.classList.contains('full');
+      if (full && holder.clientWidth >= MINW) {
+        frame.style.width = '100%'; frame.style.height = '100%'; frame.style.transform = 'none';
+        return;
+      }
+      // preview, or full screen on a narrow screen: lay the map out wide enough for its side panel, then scale
+      const k = holder.clientWidth / (full ? MINW : VW);
+      frame.style.width = (full ? MINW : VW) + 'px'; frame.style.height = (holder.clientHeight / k) + 'px';
+      frame.style.transform = 'scale(' + k + ')';
+    }
+    function load() {
+      if (frame) return;
+      frame = document.createElement('iframe');
+      frame.src = embed.dataset.src;
+      frame.title = embed.dataset.title || '';
+      frame.setAttribute('allowfullscreen', '');
+      frame.addEventListener('load', () => {
+        try {   // same-origin on the live site: let Esc inside the map close full screen too
+          frame.contentWindow.addEventListener('keydown', e => { if (e.key === 'Escape') exitFull(); });
+        } catch (_) {}
+      });
+      holder.appendChild(frame);
+      fitPreview();
+    }
+    function enterFull() {
+      load();
+      embed.classList.add('full', 'live');
+      document.body.classList.add('embed-open');
+      fitPreview();
+      top.querySelector('.embed-exit').focus();
+    }
+    function exitFull() {
+      if (!embed.classList.contains('full')) return;
+      embed.classList.remove('full');
+      document.body.classList.remove('embed-open');
+      fitPreview();
+      embed.querySelector('.embed-full').focus({ preventScroll: true });
+    }
+    embed.exitFull = exitFull;
+
+    shield.addEventListener('click', () => { load(); embed.classList.add('live'); });
+    embed.querySelector('.embed-full').addEventListener('click', enterFull);
+    top.querySelector('.embed-exit').addEventListener('click', exitFull);
+    addEventListener('resize', fitPreview);
+
+    // load the map only when its project panel is opened
+    const panel = embed.closest('.proj-detail');
+    new MutationObserver(() => {
+      if (!panel.hidden) { load(); requestAnimationFrame(fitPreview); }
+      else { exitFull(); embed.classList.remove('live'); }
+    }).observe(panel, { attributes: true, attributeFilter: ['hidden'] });
+  });
+  // Esc leaves full screen first, before it closes the project panel
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    const full = document.querySelector('.embed.full');
+    if (full) { e.stopImmediatePropagation(); full.exitFull(); }
+  }, true);
 })();
 </script>
 </body>
